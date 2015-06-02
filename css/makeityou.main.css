@@ -1,0 +1,155 @@
+﻿:root{
+}
+
+h2,h3,h4,h5,h6{
+       font-family: 'Great Vibes', cursive;
+       color:#ffffff;
+}
+
+body,.row,.section{
+       font-family: 'Josefin Slab', serif;
+       color:#ffffff;
+}
+
+body {
+    text-align: center;
+    color:#FFFFFF;
+   background-image: url('crisp_paper_ruffles_@2X.png');
+}
+
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 120px;
+    font-weight:400;
+    text-align: center;
+    background-color:#fe68e5;
+    border-bottom: 1px solid #fe47df ;
+    padding: 20px 4px 0px 4px;
+    margin:10px 0px 0px 0px;
+}
+
+.header{
+    background-color:#fe68e5;
+    border-bottom: 1px solid #fe47df ;
+    padding: 20px 4px 0px 4px;
+    margin:10px auto 0px auto;
+}
+
+h2 {
+    font-size: 50px;
+    font-weight:400;
+    text-align: center;
+}
+h3{
+    font-size: 28px;
+     font-weight:400;
+}
+
+p{
+    font-weight:500;
+    font-size: 16px;
+}
+
+
+.row{
+    margin:10px 0px;
+
+}
+
+.section{
+    text-align: center;
+}
+
+
+.box{
+    padding: 0px 5px 0px 5px;
+}
+
+.panel-normal, .panel-alt, .panel-blue{
+    text-align: center;
+	box-shadow: 10px 10px 20px -10px rgba(0,0,0,0.75);
+    padding:4px;
+}
+
+.panel-normal{
+    background-color:#fe68e5;
+
+}
+
+.panel-alt{
+    background-color:#a337ac;
+}
+
+.panel-blue{
+    background-color:#34baff;
+    color:#ffffff;
+}
+
+
+
+.panel-footer{
+    background-color:rgba(128, 128, 128, 0.50);
+    text-align: center;
+    padding:4px;
+    margin: 10px;
+}
+
+.image {
+    margin: 20px 0px 0px 0px;
+    border: 0px solid #ffffff;	
+}
+
+
+.image-footer{
+    width:300px;
+    margin:auto;
+    background-color:#676767;
+    border-radius: 0px 0px 4px 4px;
+    color#ffffff;
+    text-decoration:none;
+    cursor: pointer;
+}
+
+.clickable{
+    cursor: pointer;
+}
+.card{
+    border: 1px solid #ffffff;	
+}
+
+.makeityou-button, .makeityou-button:hover{
+   width:200px;
+   margin: 10px auto;
+   font-size:20px;
+  -webkit-border-radius: 4;
+  -moz-border-radius: 4;
+  border-radius: 4px;
+  color: #ffffff;
+  background: #fe47df;
+  padding: 8px 20px 7px 20px;
+  text-decoration: none;
+
+  border: 0px solid #ffffff ;
+}
+
+.makeityou-button-alt, .makeityou-button-alt:hover{
+   width:200px;
+   margin: 10px auto;
+   font-size:20px;
+  -webkit-border-radius: 4;
+  -moz-border-radius: 4;
+  border-radius: 4px;
+  color: #ffffff;
+  background: #8e1898;
+  padding: 8px 20px 7px 20px;
+  text-decoration: none;
+
+  border: 0px solid #ffffff ;
+}
+
+textarea, input{
+    border-radius: 4px;
+    color:#000000;
+}
+
+

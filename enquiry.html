@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/makeityou.main.css">
+    <link rel="stylesheet" type="text/css" href="css/makeityou.nav.css">
+    <link href="css/hover.css" rel="stylesheet" media="all">
+    <link href='http://fonts.googleapis.com/css?family=Josefin+Slab:400,400italic,500,600,700,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+
+</head>
+<body>
+
+
+    <div class="container-fluid">
+
+        <h1>Make it you</h1>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div>
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html" class="hvr-underline-reveal">Home</a></li>
+                        <li><a href="about.html" class="hvr-underline-reveal">About</a></li>
+                        <li><a href="cards.html" class="hvr-underline-reveal">Cards</a></liclass="active">
+                        <li class="active"><a href="#" class="hvr-underline-reveal">Enquiry</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="https://www.facebook.com/makeityouinvitations?fref=ts" class="hvr-underline-reveal"><i class="fa fa-facebook-square"></i></a></li>
+                        <li><a href="mailto:rachel.x@hotmail.co.nz" class="hvr-underline-reveal"><i class="fa fa-envelope-o"></i></a></li>
+                        <li><a href="#" type="button" class="hvr-underline-reveal" data-toggle="modal" data-target="#myModal"><i class="fa fa-phone"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="panel panel-normal">
+                <h2>Enquiry</h2>
+                <hr style="margin: 10px 40px;"></hr>
+                <form method="get" action="takeform.php">
+                    <p>
+                        <input name="email" size="64" maxlength="64" placeholder="Your Email Address" />
+
+                    </p>
+                    <p>
+                        <input name="realname"
+                               size="64"
+                               maxlength="64"
+                               placeholder="Your name" />
+
+                    </p>
+                    <p>
+                        <input name="subject"
+                               size="64"
+                               maxlength="64"
+                               placeholder="Subject Of Your Message">
+
+                    </p>
+                    <p>
+                        <i>Please enter the text of your message in the field that follows.</i>
+                    </p>
+                    <textarea name="body"
+                              rows="10"
+                              cols="72"></textarea>
+                    <p>
+                        <input class="makeityou-button hvr-grow-shadow" type="submit" name="send" value="Send Your Message" />
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <footer class="panel-footer">
+            <a style="display:inline-block" href="#">Home  |  </a>
+            <a style="display:inline-block" href="#">About  |  </a>
+            <a style="display:inline-block" href="#">Contact</a>
+            <p>Posted by: Rachel Hannah Te Tau - Contact information: <a href="mailto:rachel.x@hotmail.co.nz">rachel.x@hotmail.co.nz</a>.</p>
+        </footer>
+    </div>
+
+
+</body>
+</html>
