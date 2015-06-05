@@ -1,0 +1,39 @@
+﻿:root{
+    -var-beautifulColor: #4cff00;
+}
+
+option, select {
+    width:526px;
+    color:#666666;
+    border-radius: 4px;
+}
+
+textarea, input{
+    border-radius: 4px;
+    color:-var(beautifulColor);
+}
+
+img {
+    border: 1px solid #ffffff;
+    cursor:pointer;
+}
+
+.mini-image{
+    display: inline-block;
+
+}
+
+@keyframes hoveron {
+    from {opacity: 0.8}
+    to {opacity:1.0}
+}
+
+.image-footer{
+    width:60px;
+    margin:auto;
+    background-color:#676767;
+    border-radius: 0px 0px 4px 4px;
+    color#ffffff;
+    font-size: 14px;
+    text-decoration:none;
+}

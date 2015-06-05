@@ -1,10 +1,9 @@
 ﻿.navbar-default {
-  background-color: #fe68e5;
-  border-color: #f791e6;
-
+  background-image: url('../images/eight_horns.png');
+  border: none;
   font-size:20px;
   font-weight:600;
-  border-radius: 0px 0px 5px 5px;
+  border-radius: 0px 0px 8px 8px;
   padding:0px;
   box-shadow: 10px 10px 20px -10px rgba(0,0,0,0.75);
 }
@@ -25,17 +24,17 @@
 }
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
   color: #ffffff;
-  background-color: #f791e6;
+  background-color: #E99BC7;
 }
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
   color: #ffffff;
-  background-color: #f791e6;
+  background-color: #E99BC7;
 }
 .navbar-default .navbar-toggle {
-  border-color: #f791e6;
+  border-color: #E99BC7;
 }
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-  background-color: #f791e6;
+  background-color: #E99BC7;
 }
 .navbar-default .navbar-toggle .icon-bar {
   background-color: #ffffff;
@@ -60,13 +59,13 @@
   }
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
     color: #ffffff;
-    background-color: #f791e6;
+    background-color: #E99BC7;
   }
 }
 .navbar-custom {
       font-size:20px;
       font-weight:600;
-  background-color: #fe68e5;
+  background-color: #E77DB9;
   border-radius: 5px 5px;
   padding:0px;
     box-shadow: 10px 10px 20px -10px rgba(0,0,0,0.75);

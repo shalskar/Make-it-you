@@ -19,20 +19,19 @@ body {
 
 h1 {
     font-family: 'Great Vibes', cursive;
-    font-size: 120px;
+    font-size: 100px;
     font-weight:400;
     text-align: center;
-    background-color:#fe68e5;
-    border-bottom: 1px solid #fe47df ;
+    background-color:#E77DB9;
+    
     padding: 20px 4px 0px 4px;
     margin:10px 0px 0px 0px;
 }
 
 .header{
-    background-color:#fe68e5;
+    background-color:#E77DB9;
     border-bottom: 1px solid #fe47df ;
-    padding: 20px 4px 0px 4px;
-    margin:10px auto 0px auto;
+
 }
 
 h2 {
@@ -65,24 +64,35 @@ p{
     padding: 0px 5px 0px 5px;
 }
 
-.panel-normal, .panel-alt, .panel-blue{
+panel, jumbotron{
+    border-radius: 8px;
+}
+
+.panel-normal, .panel-alt, .panel-blue, .panel-image-wedding{
     text-align: center;
 	box-shadow: 10px 10px 20px -10px rgba(0,0,0,0.75);
     padding:4px;
 }
 
 .panel-normal{
-    background-color:#fe68e5;
+    background-image: url('../images/eight_horns.png');
+    
 
 }
 
+
 .panel-alt{
-    background-color:#a337ac;
+    background-image: url('../images/paisley.png');
+}
+
+.panel-image-wedding{
+    background-image: url('../images/weddingpic2.jpg');
+    background-position:80% center;
+    background-size:cover;
 }
 
 .panel-blue{
-    background-color:#34baff;
-    color:#ffffff;
+background-image: url('../images/symphony.png');
 }
 
 
@@ -117,7 +127,9 @@ p{
     border: 1px solid #ffffff;	
 }
 
-.makeityou-button, .makeityou-button:hover{
+.makeityou-button, .makeityou-button:hover,
+.makeityou-button-alt, .makeityou-button-alt:hover,
+.makeityou-button-image, .makeityou-button-image:hover {
    width:200px;
    margin: 10px auto;
    font-size:20px;
@@ -125,31 +137,29 @@ p{
   -moz-border-radius: 4;
   border-radius: 4px;
   color: #ffffff;
-  background: #fe47df;
   padding: 8px 20px 7px 20px;
   text-decoration: none;
-
+  cursor:pointer;
   border: 0px solid #ffffff ;
+}
+
+.makeityou-button, .makeityou-button:hover{
+  background: rgba(234, 95, 174, 0.6);
 }
 
 .makeityou-button-alt, .makeityou-button-alt:hover{
-   width:200px;
-   margin: 10px auto;
-   font-size:20px;
-  -webkit-border-radius: 4;
-  -moz-border-radius: 4;
-  border-radius: 4px;
-  color: #ffffff;
-  background: #8e1898;
-  padding: 8px 20px 7px 20px;
-  text-decoration: none;
-
-  border: 0px solid #ffffff ;
+  background: rgba(176, 73, 232, 0.6);
 }
 
-textarea, input{
-    border-radius: 4px;
-    color:#000000;
+.makeityou-button-image, .makeityou-button-image:hover{
+  background: rgba(255, 255, 255, 0.6);
+  color:#696969;
 }
+
+.nav-button {
+    width:150px;
+}
+
+
 
 

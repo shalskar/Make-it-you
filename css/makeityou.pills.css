@@ -10,7 +10,7 @@
 }
 
     .nav-pills > li.active > a, .nav-pills > li.active > a:focus {
-        color: #000000;
+        color: #676767;
         background-color: #ffffff;
     }
 
@@ -21,7 +21,7 @@
 
         .nav-pills > li.active > a:hover {
             background-color: #ffffff;
-            color: #000000;
+            color: #676767;
         }
 
 .pill-link {
