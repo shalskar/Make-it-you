@@ -11,71 +11,92 @@
     <link href="css/hover.css" rel="stylesheet" media="all">
     <link href='http://fonts.googleapis.com/css?family=Josefin+Slab:400,400italic,500,600,700,700italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body onload="open_section()">
 
-
+    <!--Main header and navigation bar-->
     <div class="container-fluid">
-        <nav class="navbar navbar-default">
+        <nav class="navbar navbar-default" style="margin-bottom: 20px;">
             <div class="container-fluid">
-                <div class="navbar-header">
-                    <h2 style="padding:0px 100px 0px 50px; margin-top:40px;">Make it you</h2>
-                </div>
                 <div>
-                    <ul class="nav navbar-nav"  style="margin-top:3%; margin-left: auto; margin-right: auto;">
-                        <li class="nav-button"><a href="index.html" class="hvr-underline-reveal">Home</a></li>
-                        <li class="nav-button"><a href="about.html" class="hvr-underline-reveal">About</a></li>
-                        <li class="active nav-button"><a href="#" class="hvr-underline-reveal">Cards</a></liclass="active">
-                        <li class="nav-button"><a href="enquiry.html" class="hvr-underline-reveal">Enquiry</a></li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="https://www.facebook.com/makeityouinvitations?fref=ts" class="hvr-underline-reveal"><i class="fa fa-facebook-square"></i></a></li>
-                        <li><a href="mailto:rachel.x@hotmail.co.nz" class="hvr-underline-reveal"><i class="fa fa-envelope-o"></i></a></li>
-                        <li><a href="#" type="button" class="hvr-underline-reveal" data-toggle="modal" data-target="#myModal"><i class="fa fa-phone"></i></a></li>
-                    </ul>
+                    <div class="navbar-header">
+                        <!--Collapse button, only visible when window is small-->
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <h1 style="padding:0px 75px 0px 25px; ">Make it you</h1>
+                    </div>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <!--Main links-->
+                        <ul class="nav navbar-nav" style="margin-top:45px;">
+                            <li class="nav-button"><a href="index.html" class="hvr-underline-reveal">Home</a></li>
+                            <li class="nav-button"><a href="about.html" class="hvr-underline-reveal">About</a></li>
+                            <li class="active  nav-button"><a href="cards.html" class="hvr-underline-reveal">Cards</a></li>
+                            <li class="nav-button"><a href="enquiry.html" class="hvr-underline-reveal">Enquiry</a></li>
+                        </ul>
+                        <!--Icon links to facebook, e-mail and phone-->
+                        <ul class="nav navbar-nav navbar-right" style="margin-top:45px;">
+                            <li class="nav-button-small"><a href="https://www.facebook.com/makeityouinvitations?fref=ts"><i class="fa fa-facebook-square"></i></a></li>
+                            <li class="nav-button-small"><a href="mailto:rachel.x@hotmail.co.nz"><i class="fa fa-envelope-o"></i></a></li>
+                            <li class="nav-button-small"><a href="#" type="button" data-toggle="modal" data-target="#myModal"><i class="fa fa-phone"></i></a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </nav>
-
     </div>
 
+    <!--Main content area-->
     <div class="container">
+
+        <!--Jumbotron containing description and a pill navigator-->
         <div class="row">
             <div class="col-sm-12">
                 <div class="jumbotron panel-alt">
                     <h2>Our selection</h2>
-                    <hr style="margin: 10px 40px;"></hr>
+                    <hr style="margin: 10px 40px;">
                     <p>
                         Any of these cards can be customised to your specifications, or we can <br>
                         create a new one for you. The possibilities are endless so please enquire!
                     </p>
-                    <hr style="margin: 10px 40px;"></hr>
+                    <hr style="margin: 10px 40px;">
                     <ul class="nav nav-pills">
-                        <li class="active"><a class="pill-link" data-toggle="pill" href="#wedding">Wedding</a></li>
-                        <li><a class="pill-link" data-toggle="pill" href="#birthday">Birthday</a></li>
-                        <li><a class="pill-link" data-toggle="pill" href="#anniversary">Anniversary</a></li>
-                        <li><a class="pill-link" data-toggle="pill" href="#babyshower">Baby shower</a></li>
-                        <li><a class="pill-link" data-toggle="pill" href="#other">Other</a></li>
+                        <li id="weddingpill" class="active"><a class="pill-link" data-toggle="pill" href="#wedding">Wedding</a></li>
+                        <li id="birthdaypill"><a class="pill-link" data-toggle="pill" href="#birthday">Birthday</a></li>
+                        <li id="anniversarypill"><a class="pill-link" data-toggle="pill" href="#anniversary">Anniversary</a></li>
+                        <li id="babyshowerpill"><a class="pill-link" data-toggle="pill" href="#babyshower">Baby shower</a></li>
+                        <li id="thankyoupill"><a class="pill-link" data-toggle="pill" href="#thankyou">Thank you</a></li>
+                        <li id="savethedatepill"><a class="pill-link" data-toggle="pill" href="#savethedate">Save the date</a></li>
+                        <!--<li id="otherpill"><a class="pill-link" data-toggle="pill" href="#other">Other</a></li>-->
                     </ul>
                 </div>
             </div>
         </div>
-        <div class="tab-content">
+
+        <!--Each pane contains a different range of cards: Wedding, Anniversary, Birthday, Baby shower and other-->
+        <div class="tab-content" id="pills">
+            <!--Wedding pane-->
             <div class="row tab-pane fade in active" id="wedding">
                 <div class="col-sm-12">
                     <div class="panel panel-normal">
                         <h2 class="text-center;">Wedding</h2>
-                        <hr style="margin: 0px 40px;"></hr>
+                        <hr style="margin: 10px 40px;">
                         <div class="row">
                             <div class="col-sm-4">
                                 <div class="section">
-                                    <img src="images/hearts.jpg" class="img-rounded image" alt="Cinque Terre" width="300" height="380">
-                                    <p type="reset" onclick="location.href='enquiry.html'" class="image-footer  hvr-icon-forward">$3.00 per card - Minimum 10</p>
+                                    <div class="imagediv">
+                                        <img src="images/wedding/rustic.jpg" class="img-rounded image" alt="Rustic wedding invitation">
+                                        <p type="reset" onclick="location.href='enquiry.html'" alt="Click to purchase" class="image-footer  hvr-icon-forward">$3.00 ea - min 10</p>
+                                    </div>
+
                                     <h3 class="text-center">Subheader</h3>
-                                    <hr style="margin: 10px 40px;"></hr>
+                                    <hr style="margin: 10px 40px;">
                                     <p class="text-center">
                                         Hier kommt alle die passende text rein.
                                         Aber nur was wichtig ist, alles ubrigens kommt morgen. Wenn es
@@ -86,10 +107,12 @@
                             </div>
                             <div class="col-sm-4">
                                 <div class=" section">
-                                    <img src="images/bee.jpg" class="img-rounded image" alt="Cinque Terre" width="300" height="380">
-                                    <p type="reset" onclick="location.href='enquiry.html'" class="image-footer  hvr-icon-forward">$3.00 per card - Minimum 10</p>
+                                    <div class="imagediv">
+                                        <img src="images/wedding/blackboardhearts.jpg" class="img-rounded image" alt="Hearts on blackboard wedding invitation">
+                                        <p type="reset" onclick="location.href='enquiry.html'" alt="Click to enquire" class="image-footer  hvr-icon-forward">$3.00 ea - min 10</p>
+                                    </div>
                                     <h3 class="text-center">Subheader</h3>
-                                    <hr style="margin: 10px 40px;"></hr>
+                                    <hr style="margin: 10px 40px;">
                                     <p class="text-center">
                                         Hier kommt alle die passende text rein.
                                         Aber nur was wichtig ist, alles ubrigens kommt morgen. Wenn es
@@ -100,10 +123,12 @@
                             </div>
                             <div class="col-sm-4">
                                 <div class="section">
-                                    <img src="images/dress.jpg" class="img-rounded image" alt="Cinque Terre" width="300" height="380">
-                                    <p type="reset" onclick="location.href='enquiry.html'" class="image-footer  hvr-icon-forward">$3.00 per card - Minimum 10</p>
+                                    <div class="imagediv">
+                                        <img src="images/wedding/dress.jpg" class="img-rounded image" alt="White dress wedding invitation">
+                                        <p type="reset" onclick="location.href='enquiry.html'" alt="Click to enquire" class="image-footer  hvr-icon-forward">$3.00 ea - min 10</p>
+                                    </div>
                                     <h3 class="text-center">Subheader</h3>
-                                    <hr style="margin: 10px 40px;"></hr>
+                                    <hr style="margin: 10px 40px;">
                                     <p class="text-center">
                                         Hier kommt alle die passende text rein.
                                         Aber nur was wichtig ist, alles ubrigens kommt morgen. Wenn es
@@ -113,13 +138,15 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row" name="row-extra-wedding" style="display:none;">
+                        <div class="row">
                             <div class="col-sm-4">
                                 <div id="hearts2-card-section" class="section">
-                                    <img src="images/hearts.jpg" class="img-rounded image hvr-underline-from-center" alt="Cinque Terre" width="300" height="380">
-                                    <p type="reset" onclick="location.href='enquiry.html'" class="image-footer  hvr-icon-forward">$3.00 per card - Minimum 10</p>
+                                    <div class="imagediv">
+                                        <img src="images/wedding/fan.jpg" class="img-rounded image" alt="Pink fan wedding invitation">
+                                        <p type="reset" onclick="location.href='enquiry.html'" alt="Click to enquire" class="image-footer  hvr-icon-forward">$3.00 ea - min 10</p>
+                                    </div>
                                     <h3 class="text-center">Subheader</h3>
-                                    <hr style="margin: 10px 40px;"></hr>
+                                    <hr style="margin: 10px 40px;">
                                     <p class="text-center">
                                         Hier kommt alle die passende text rein.
                                         Aber nur was wichtig ist, alles ubrigens kommt morgen. Wenn es
@@ -128,53 +155,75 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-sm-4">
+                            <div class="col-sm-8">
                                 <div id="bee2-card-section" class=" section">
-                                    <img src="images/bee.jpg" class="img-rounded image" alt="Cinque Terre" width="300" height="380">
-                                    <p type="reset" onclick="location.href='enquiry.html'" class="image-footer  hvr-icon-forward">$3.00 per card - Minimum 10</p>
-                                    <h3 class="text-center">Subheader</h3>
-                                    <hr style="margin: 10px 40px;"></hr>
-                                    <p class="text-center">
-                                        Hier kommt alle die passende text rein.
-                                        Aber nur was wichtig ist, alles ubrigens kommt morgen. Wenn es
-                                        nicht wichtig ist, kannst du es selber schreiben weil ich faul
-                                        bin.
-                                    </p>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="imagedivwide">
+                                                <img src="images/wedding/heartswithsuit.jpg" class="img-rounded image" alt="Two hearts with suit and dress wedding invitation">
+                                                <p type="reset" onclick="location.href='enquiry.html'" alt="Click to purchase" class="image-footer  hvr-icon-forward">$3.00 ea - min 10</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <h3 class="text-center">Subheader</h3>
+                                            <hr style="margin: 10px 40px;">
+                                            <p class="text-center">
+                                                Hier kommt alle die passende text rein.
+                                                Aber nur was wichtig ist, alles ubrigens kommt morgen. Wenn es
+                                                nicht wichtig ist, kannst du es selber schreiben weil ich faul
+                                                bin.
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-sm-4">
+                            <div class="col-sm-8">
                                 <div id="dress2-card-section" class="section">
-                                    <img src="images/dress.jpg" class="img-rounded image" alt="Cinque Terre" width="300" height="380">
-                                    <p type="reset" onclick="location.href='enquiry.html'" class="image-footer  hvr-icon-forward">$3.00 per card - Minimum 10</p>
-                                    <h3 class="text-center">Subheader</h3>
-                                    <hr style="margin: 10px 40px;"></hr>
-                                    <p class="text-center">
-                                        Hier kommt alle die passende text rein.
-                                        Aber nur was wichtig ist, alles ubrigens kommt morgen. Wenn es
-                                        nicht wichtig ist, kannst du es selber schreiben weil ich faul
-                                        bin.
-                                    </p>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="imagedivwide">
+                                                <span class="image-helper"></span><div style="display:inline-block; vertical-align: middle;">
+                                                    <img src="images/wedding/redheart.jpg" class="img-rounded image" alt="Red heart wedding invitation">
+                                                    <p type="reset" onclick="location.href='enquiry.html'" alt="Click to purchase" class="image-footer  hvr-icon-forward">$3.00 ea - min 10</p>
+                                                </div>
+                                                </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                                <h3 class="text-center">Subheader</h3>
+                                                <hr style="margin: 10px 40px;">
+                                                <p class="text-center">
+                                                    Hier kommt alle die passende text rein.
+                                                    Aber nur was wichtig ist, alles ubrigens kommt morgen. Wenn es
+                                                    nicht wichtig ist, kannst du es selber schreiben weil ich faul
+                                                    bin.
+                                                </p>
+                                            </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <i id="wedding-expand-btn" onclick="expand_panel('wedding');" class="fa fa-chevron-circle-down fa-3x hvr-grow clickable"></i>
-                        <i id="wedding-deflate-btn" onclick="deflate_panel('wedding');" class="fa fa-chevron-circle-up fa-3x hvr-grow clickable" style="display:none;"></i>
+
+                        <!--Buttons to be used when extra cotent is added-->
+                        <!--<i id="wedding-expand-btn" onclick="expand_panel('wedding');" class="fa fa-chevron-circle-down fa-3x hvr-grow clickable"></i>
+                        <i id="wedding-deflate-btn" onclick="deflate_panel('wedding');" class="fa fa-chevron-circle-up fa-3x hvr-grow clickable" style="display:none;"></i>-->
                     </div>
                 </div>
             </div>
-
+            <!--Birthday pane-->
             <div class="row tab-pane fade" id="birthday">
                 <div class="col-sm-12">
                     <div class="panel panel-blue">
                         <h2 class="text-center">Birthday</h2>
-                        <hr style="margin: 0px 40px;"></hr>
+                        <hr style="margin: 0px 40px;">
                         <div class="row">
                             <div class="col-sm-4">
                                 <div id="hearts-card-section" class="section">
-                                    <img src="images/hearts.jpg" class="img-rounded image hvr-underline-from-center" alt="Cinque Terre" width="300" height="380">
-                                    <p type="reset" onclick="location.href='enquiry.html'" class="image-footer  hvr-icon-forward">$3.00 per card - Minimum 10</p>
+                                    <div class="imagediv">
+                                        <img src="images/birthday/blueballoons.jpg" class="img-rounded image" alt="Blue balloons birthday invitation">
+                                        <p type="reset" onclick="location.href='enquiry.html'" alt="Click to purchase" class="image-footer  hvr-icon-forward">$3.00 ea - min 10</p>
+                                    </div>
                                     <h3 class="text-center">Subheader</h3>
-                                    <hr style="margin: 10px 40px;"></hr>
+                                    <hr style="margin: 10px 40px;">
                                     <p class="text-center">
                                         Hier kommt alle die passende text rein.
                                         Aber nur was wichtig ist, alles ubrigens kommt morgen. Wenn es
@@ -185,10 +234,12 @@
                             </div>
                             <div class="col-sm-4">
                                 <div id="bee-card-section" class=" section">
-                                    <img src="images/bee.jpg" class="img-rounded image" alt="Cinque Terre" width="300" height="380">
-                                    <p type="reset" onclick="location.href='enquiry.html'" class="image-footer  hvr-icon-forward">$3.00 per card - Minimum 10</p>
+                                    <div class="imagediv">
+                                        <img src="images/birthday/bee.jpg" class="img-rounded image" alt="Bumble bee birthday invitation">
+                                        <p type="reset" onclick="location.href='enquiry.html'" alt="Click to purchase" class="image-footer  hvr-icon-forward">$3.00 ea - min 10</p>
+                                    </div>
                                     <h3 class="text-center">Subheader</h3>
-                                    <hr style="margin: 10px 40px;"></hr>
+                                    <hr style="margin: 10px 40px;">
                                     <p class="text-center">
                                         Hier kommt alle die passende text rein.
                                         Aber nur was wichtig ist, alles ubrigens kommt morgen. Wenn es
@@ -199,10 +250,12 @@
                             </div>
                             <div class="col-sm-4">
                                 <div id="dress-card-section" class="section">
-                                    <img src="images/dress.jpg" class="img-rounded image" alt="Cinque Terre" width="300" height="380">
-                                    <p type="reset" onclick="location.href='enquiry.html'" class="image-footer  hvr-icon-forward">$3.00 per card - Minimum 10</p>
+                                    <div class="imagediv">
+                                        <img src="images/birthday/yellowballoons.jpg" class="img-rounded image" alt="Yellow balloons birthday invitation">
+                                        <p type="reset" onclick="location.href='enquiry.html'" alt="Click to purchase" class="image-footer  hvr-icon-forward">$3.00 ea - min 10</p>
+                                    </div>
                                     <h3 class="text-center">Subheader</h3>
-                                    <hr style="margin: 10px 40px;"></hr>
+                                    <hr style="margin: 10px 40px;">
                                     <p class="text-center">
                                         Hier kommt alle die passende text rein.
                                         Aber nur was wichtig ist, alles ubrigens kommt morgen. Wenn es
@@ -213,24 +266,67 @@
                             </div>
                         </div>
 
-                        <i id="birthday-expand-btn" onclick="expand_panel('birthday');" class="fa fa-chevron-circle-down fa-3x hvr-grow  clickable"></i>
-                        <i id="birthday-deflate-btn" onclick="deflate_panel('birthday');" class="fa fa-chevron-circle-up fa-3x hvr-grow clickable" style="display:none;"></i>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div id="hearts-card-section" class="section">
+                                    <div class="imagediv">
+                                        <span class="image-helper"></span><div style="display:inline-block; vertical-align: middle;">
+                                            <img src="images/birthday/oneyearcrown.jpg" class="img-rounded image" alt="One year old birthday invitation">
+                                            <p type="reset" onclick="location.href='enquiry.html'" alt="Click to purchase" class="image-footer  hvr-icon-forward">$3.00 ea - min 10</p>
+                                        </div>
+                                    </div>
+                                    <h3 class="text-center">Subheader</h3>
+                                    <hr style="margin: 10px 40px;">
+                                    <p class="text-center">
+                                        Hier kommt alle die passende text rein.
+                                        Aber nur was wichtig ist, alles ubrigens kommt morgen. Wenn es
+                                        nicht wichtig ist, kannst du es selber schreiben weil ich faul
+                                        bin.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div id="dress-card-section" class="section">
+                                    <div class="imagediv">
+                                        <span class="image-helper"></span><div style="display:inline-block; vertical-align: middle;">
+
+                                            <img src="images/birthday/pirate.jpg" class="img-rounded image" alt="Pirate bithday invitation">
+                                            <p type="reset" onclick="location.href='enquiry.html'" alt="Click to purchase" class="image-footer  hvr-icon-forward">$3.00 ea - min 10</p>
+                                        </div>
+                                    </div>
+                                    <h3 class="text-center">Subheader</h3>
+                                    <hr style="margin: 10px 40px;">
+                                    <p class="text-center">
+                                        Hier kommt alle die passende text rein.
+                                        Aber nur was wichtig ist, alles ubrigens kommt morgen. Wenn es
+                                        nicht wichtig ist, kannst du es selber schreiben weil ich faul
+                                        bin.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Buttons to be used when extra cotent is added-->
+                        <!--<i id="birthday-expand-btn" onclick="expand_panel('birthday');" class="fa fa-chevron-circle-down fa-3x hvr-grow  clickable"></i>
+                        <i id="birthday-deflate-btn" onclick="deflate_panel('birthday');" class="fa fa-chevron-circle-up fa-3x hvr-grow clickable" style="display:none;"></i>-->
                     </div>
                 </div>
             </div>
-
+            <!--Anniversary pane-->
             <div class="row tab-pane fade" id="anniversary">
                 <div class="col-sm-12">
                     <div class="panel panel-alt">
                         <h2 class="text-center">Anniversary</h2>
-                        <hr style="margin: 0px 40px;"></hr>
+                        <hr style="margin: 0px 40px;">
                         <div class="row">
-                            <div class="col-sm-4">
+                            <div class="col-sm-6">
                                 <div class="section">
-                                    <img src="images/hearts.jpg" class="img-rounded image hvr-underline-from-center" alt="Cinque Terre" width="300" height="380">
-                                    <p type="reset" onclick="location.href='enquiry.html'" class="image-footer  hvr-icon-forward">$3.00 per card - Minimum 10</p>
+                                    <div class="imagediv">
+                                        <img src="images/anniversary/25year.jpg" class="img-rounded image" alt="25 year anniversary invitation">
+                                        <p type="reset" onclick="location.href='enquiry.html'" alt="Click to purchase" class="image-footer  hvr-icon-forward">$3.00 ea - min 10</p>
+                                    </div>
                                     <h3 class="text-center">Subheader</h3>
-                                    <hr style="margin: 10px 40px;"></hr>
+                                    <hr style="margin: 10px 40px;">
                                     <p class="text-center">
                                         Hier kommt alle die passende text rein.
                                         Aber nur was wichtig ist, alles ubrigens kommt morgen. Wenn es
@@ -239,26 +335,14 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-sm-4">
-                                <div class=" section">
-                                    <img src="images/bee.jpg" class="img-rounded image" alt="Cinque Terre" width="300" height="380">
-                                    <p type="reset" onclick="location.href='enquiry.html'" class="image-footer  hvr-icon-forward">$3.00 per card - Minimum 10</p>
-                                    <h3 class="text-center">Subheader</h3>
-                                    <hr style="margin: 10px 40px;"></hr>
-                                    <p class="text-center">
-                                        Hier kommt alle die passende text rein.
-                                        Aber nur was wichtig ist, alles ubrigens kommt morgen. Wenn es
-                                        nicht wichtig ist, kannst du es selber schreiben weil ich faul
-                                        bin.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
+                            <div class="col-sm-6">
                                 <div class="section">
-                                    <img src="images/dress.jpg" class="img-rounded image" alt="Cinque Terre" width="300" height="380">
-                                    <p type="reset" onclick="location.href='enquiry.html'" class="image-footer  hvr-icon-forward">$3.00 per card - Minimum 10</p>
+                                    <div class="imagediv">
+                                        <img src="images/anniversary/hearts.jpg" class="img-rounded image" alt="Red heart anniversary invitation">
+                                        <p type="reset" onclick="location.href='enquiry.html'" alt="Click to purchase" class="image-footer  hvr-icon-forward">$3.00 ea - min 10</p>
+                                    </div>
                                     <h3 class="text-center">Subheader</h3>
-                                    <hr style="margin: 10px 40px;"></hr>
+                                    <hr style="margin: 10px 40px;">
                                     <p class="text-center">
                                         Hier kommt alle die passende text rein.
                                         Aber nur was wichtig ist, alles ubrigens kommt morgen. Wenn es
@@ -269,68 +353,146 @@
                             </div>
                         </div>
 
-                        <div class="row" name="row-extra-anniversary" style="display:none;">
-                            <div class="col-sm-4">
-                                <div id="hearts2-card-section" class="section">
-                                    <img src="images/hearts.jpg" class="img-rounded image hvr-underline-from-center" alt="Cinque Terre" width="300" height="380">
-                                    <p type="reset" onclick="location.href='enquiry.html'" class="image-footer  hvr-icon-forward">$3.00 per card - Minimum 10</p>
-                                    <h3 class="text-center">Subheader</h3>
-                                    <hr style="margin: 10px 40px;"></hr>
-                                    <p class="text-center">
-                                        Hier kommt alle die passende text rein.
-                                        Aber nur was wichtig ist, alles ubrigens kommt morgen. Wenn es
-                                        nicht wichtig ist, kannst du es selber schreiben weil ich faul
-                                        bin.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div id="bee2-card-section" class=" section">
-                                    <img src="images/bee.jpg" class="img-rounded image" alt="Cinque Terre" width="300" height="380">
-                                    <p type="reset" onclick="location.href='enquiry.html'" class="image-footer  hvr-icon-forward">$3.00 per card - Minimum 10</p>
-                                    <h3 class="text-center">Subheader</h3>
-                                    <hr style="margin: 10px 40px;"></hr>
-                                    <p class="text-center">
-                                        Hier kommt alle die passende text rein.
-                                        Aber nur was wichtig ist, alles ubrigens kommt morgen. Wenn es
-                                        nicht wichtig ist, kannst du es selber schreiben weil ich faul
-                                        bin.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div id="dress2-card-section" class="section">
-                                    <img src="images/dress.jpg" class="img-rounded image" alt="Cinque Terre" width="300" height="380">
-                                    <p type="reset" onclick="location.href='enquiry.html'" class="image-footer  hvr-icon-forward">$3.00 per card - Minimum 10</p>
-                                    <h3 class="text-center">Subheader</h3>
-                                    <hr style="margin: 10px 40px;"></hr>
-                                    <p class="text-center">
-                                        Hier kommt alle die passende text rein.
-                                        Aber nur was wichtig ist, alles ubrigens kommt morgen. Wenn es
-                                        nicht wichtig ist, kannst du es selber schreiben weil ich faul
-                                        bin.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <i id="anniversary-expand-btn" onclick="expand_panel('anniversary');" class="fa fa-chevron-circle-down fa-3x hvr-grow clickable"></i>
-                        <i id="anniversary-deflate-btn" onclick="deflate_panel('anniversary');" class="fa fa-chevron-circle-up fa-3x hvr-grow clickable" style="display:none;"></i>
+                        <!--<div class="row" name="row-extra-anniversary" style="display:none;">
+                        </div>-->
+                        <!--Buttons to be used when extra cotent is added-->
+                        <!--<i id="anniversary-expand-btn" onclick="expand_panel('anniversary');" class="fa fa-chevron-circle-down fa-3x hvr-grow clickable"></i>
+                        <i id="anniversary-deflate-btn" onclick="deflate_panel('anniversary');" class="fa fa-chevron-circle-up fa-3x hvr-grow clickable" style="display:none;"></i>-->
                     </div>
                 </div>
             </div>
-
+            <!--Babyshower pane-->
             <div class="row tab-pane fade" id="babyshower">
                 <div class="col-sm-12">
                     <div class="panel panel-normal">
-                        <h2 class="text-center">Baby showers</h2>
-                        <hr style="margin: 0px 40px;"></hr>
+                        <h2 class="text-center">Baby shower</h2>
+                        <hr style="margin: 0px 40px;">
                         <div class="row">
                             <div class="col-sm-4">
                                 <div class="section">
-                                    <img src="images/hearts.jpg" class="img-rounded image hvr-underline-from-center" alt="Cinque Terre" width="300" height="380">
-                                    <p type="reset" onclick="location.href='enquiry.html'" class="image-footer  hvr-icon-forward">$3.00 per card - Minimum 10</p>
+                                    <div class="imagediv">
+                                        <img src="images/babyshower/itsaboy.jpg" class="img-rounded image" alt="It's a boy babyshower invitation">
+                                        <img src="images/babyshower/itsaboy.jpg" class="img-rounded image" alt="It's a boy babyshower invitation">
+                                        <p type="reset" onclick="location.href='enquiry.html'" alt="Click to purchase" class="image-footer  hvr-icon-forward">$3.00 ea - min 10</p>
+                                    </div>
                                     <h3 class="text-center">Subheader</h3>
-                                    <hr style="margin: 10px 40px;"></hr>
+                                    <hr style="margin: 10px 40px;">
+                                    <p class="text-center">
+                                        Hier kommt alle die passende text rein.
+                                        Aber nur was wichtig ist, alles ubrigens kommt morgen. Wenn es
+                                        nicht wichtig ist, kannst du es selber schreiben weil ich faul
+                                        bin.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="section">
+                                    <div class="imagediv">
+                                        <img src="images/babyshower/nappy.jpg" class="img-rounded image" alt="Nappy babyshower invitation">
+                                        <p type="reset" onclick="location.href='enquiry.html'" alt="Click to purchase" class="image-footer  hvr-icon-forward">$3.00 ea - min 10</p>
+                                    </div>
+                                    <h3 class="text-center">Subheader</h3>
+                                    <hr style="margin: 10px 40px;">
+                                    <p class="text-center">
+                                        Hier kommt alle die passende text rein.
+                                        Aber nur was wichtig ist, alles ubrigens kommt morgen. Wenn es
+                                        nicht wichtig ist, kannst du es selber schreiben weil ich faul
+                                        bin.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="section">
+                                    <div class="imagediv">
+                                        <span class="image-helper"></span><div style="display:inline-block; vertical-align: middle;">
+                                            <img src="images/babyshower/pinkpram.jpg" class="img-rounded image" alt="Pink pram babyshower invitation">
+                                            <p type="reset" onclick="location.href='enquiry.html'" alt="Click to purchase" class="image-footer  hvr-icon-forward">$3.00 ea - min 10</p>
+                                        </div>
+                                    </div>
+                                    <h3 class="text-center">Subheader</h3>
+                                    <hr style="margin: 10px 40px;">
+                                    <p class="text-center">
+                                        Hier kommt alle die passende text rein.
+                                        Aber nur was wichtig ist, alles ubrigens kommt morgen. Wenn es
+                                        nicht wichtig ist, kannst du es selber schreiben weil ich faul
+                                        bin.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Buttons to be used when extra cotent is added-->
+                        <!--<i id="babyshower-expand-btn" onclick="expand_panel('babyshower');" class="fa fa-chevron-circle-down fa-3x hvr-grow clickable"></i>
+                        <i id="babyshower-deflate-btn" onclick="deflate_panel('babyshower');" class="fa fa-chevron-circle-up fa-3x hvr-grow clickable" style="display:none;"></i>-->
+                    </div>
+                </div>
+            </div>
+            <!--Thank you pane-->
+            <div class="row tab-pane fade" id="thankyou">
+                <div class="col-sm-12">
+                    <div class="panel panel-blue">
+                        <h2 class="text-center">Thank you</h2>
+                        <hr style="margin: 0px 40px;">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="section">
+                                    <div class="imagediv">
+                                        <span class="image-helper"></span><div style="display:inline-block; vertical-align: middle;">
+                                            <img src="images/thankyou/goldandblackhearts.jpg" class="img-rounded image" alt="Gold and black heart thank you">
+                                            <p type="reset" onclick="location.href='enquiry.html'" alt="Click to purchase" class="image-footer  hvr-icon-forward">$3.00 ea - min 10</p>
+                                        </div>
+                                    </div>
+                                    <h3 class="text-center">Subheader</h3>
+                                    <hr style="margin: 10px 40px;">
+                                    <p class="text-center">
+                                        Hier kommt alle die passende text rein.
+                                        Aber nur was wichtig ist, alles ubrigens kommt morgen. Wenn es
+                                        nicht wichtig ist, kannst du es selber schreiben weil ich faul
+                                        bin.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class=" section">
+                                    <div class="imagediv">
+                                        <span class="image-helper"></span><div style="display:inline-block; vertical-align: middle;">
+                                            <img src="images/thankyou/threehearts.jpg" class="img-rounded image" alt="Three hearts thank you">
+                                            <p type="reset" onclick="location.href='enquiry.html'" alt="Click to purchase" class="image-footer  hvr-icon-forward">$3.00 ea - min 10</p>
+                                        </div>
+                                    </div>
+                                    <h3 class="text-center">Subheader</h3>
+                                    <hr style="margin: 10px 40px;">
+                                    <p class="text-center">
+                                        Hier kommt alle die passende text rein.
+                                        Aber nur was wichtig ist, alles ubrigens kommt morgen. Wenn es
+                                        nicht wichtig ist, kannst du es selber schreiben weil ich faul
+                                        bin.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Buttons to be used when extra cotent is added-->
+                        <!--<i id="other-expand-btn" onclick="expand_panel('other');" class="fa fa-chevron-circle-down fa-3x hvr-grow clickable"></i>
+                        <i id="other-deflate-btn" onclick="deflate_panel('other');" class="fa fa-chevron-circle-up fa-3x hvr-grow clickable" style="display:none;"></i>-->
+                    </div>
+                </div>
+            </div>
+            <!--Save the date pane-->
+            <div class="row tab-pane fade" id="savethedate">
+                <div class="col-sm-12">
+                    <div class="panel panel-blue">
+                        <h2 class="text-center">Save the date</h2>
+                        <hr style="margin: 0px 40px;">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="section">
+                                    <div class="imagediv">
+                                        <img src="images/savethedate/cartoon.jpg" class="img-rounded image" alt="Cartoon save the date">
+                                        <p type="reset" onclick="location.href='enquiry.html'" alt="Click to purchase" class="image-footer  hvr-icon-forward">$3.00 ea - min 10</p>
+                                    </div>
+                                    <h3 class="text-center">Subheader</h3>
+                                    <hr style="margin: 10px 40px;">
                                     <p class="text-center">
                                         Hier kommt alle die passende text rein.
                                         Aber nur was wichtig ist, alles ubrigens kommt morgen. Wenn es
@@ -341,10 +503,14 @@
                             </div>
                             <div class="col-sm-4">
                                 <div class=" section">
-                                    <img src="images/bee.jpg" class="img-rounded image" alt="Cinque Terre" width="300" height="380">
-                                    <p type="reset" onclick="location.href='enquiry.html'" class="image-footer  hvr-icon-forward">$3.00 per card - Minimum 10</p>
+                                    <div class="imagediv">
+                                        <span class="image-helper"></span><div style="display:inline-block; vertical-align: middle;">
+                                            <img src="images/savethedate/green.jpg" class="img-rounded image" alt="Green calendar save the date">
+                                            <p type="reset" onclick="location.href='enquiry.html'" alt="Click to purchase" class="image-footer  hvr-icon-forward">$3.00 ea - min 10</p>
+                                        </div>
+                                        </div>
                                     <h3 class="text-center">Subheader</h3>
-                                    <hr style="margin: 10px 40px;"></hr>
+                                    <hr style="margin: 10px 40px;">
                                     <p class="text-center">
                                         Hier kommt alle die passende text rein.
                                         Aber nur was wichtig ist, alles ubrigens kommt morgen. Wenn es
@@ -355,10 +521,12 @@
                             </div>
                             <div class="col-sm-4">
                                 <div class="section">
-                                    <img src="images/dress.jpg" class="img-rounded image" alt="Cinque Terre" width="300" height="380">
-                                    <p type="reset" onclick="location.href='enquiry.html'" class="image-footer  hvr-icon-forward">$3.00 per card - Minimum 10</p>
+                                    <div class="imagediv">
+                                        <img src="images/savethedate/squares.jpg" class="img-rounded image" alt="Squares save the date">
+                                        <p type="reset" onclick="location.href='enquiry.html'" alt="Click to purchase" class="image-footer  hvr-icon-forward">$3.00 ea - min 10</p>
+                                    </div>
                                     <h3 class="text-center">Subheader</h3>
-                                    <hr style="margin: 10px 40px;"></hr>
+                                    <hr style="margin: 10px 40px;">
                                     <p class="text-center">
                                         Hier kommt alle die passende text rein.
                                         Aber nur was wichtig ist, alles ubrigens kommt morgen. Wenn es
@@ -368,24 +536,28 @@
                                 </div>
                             </div>
                         </div>
-                        <i id="babyshower-expand-btn" onclick="expand_panel('babyshower');" class="fa fa-chevron-circle-down fa-3x hvr-grow clickable"></i>
-                        <i id="babyshower-deflate-btn" onclick="deflate_panel('babyshower');" class="fa fa-chevron-circle-up fa-3x hvr-grow clickable" style="display:none;"></i>
+
+                        <!--Buttons to be used when extra cotent is added-->
+                        <!--<i id="other-expand-btn" onclick="expand_panel('other');" class="fa fa-chevron-circle-down fa-3x hvr-grow clickable"></i>
+                        <i id="other-deflate-btn" onclick="deflate_panel('other');" class="fa fa-chevron-circle-up fa-3x hvr-grow clickable" style="display:none;"></i>-->
                     </div>
                 </div>
             </div>
 
-            <div class="row tab-pane fade" id="other">
+            <!--Other pane to be usted when extra content is added-->
+            <!--Other pane-->
+            <!--<div class="row tab-pane fade" id="other">
                 <div class="col-sm-12">
                     <div class="panel panel-blue">
                         <h2 class="text-center">Other occasions</h2>
-                        <hr style="margin: 0px 40px;"></hr>
+                        <hr style="margin: 0px 40px;">
                         <div class="row">
                             <div class="col-sm-4">
                                 <div class="section">
-                                    <img src="images/hearts.jpg" class="img-rounded image hvr-underline-from-center" alt="Cinque Terre" width="300" height="380">
-                                    <p type="reset" onclick="location.href='enquiry.html'" class="image-footer  hvr-icon-forward">$3.00 per card - Minimum 10</p>
+                                    <img src="images/hearts.jpg" class="img-rounded image" alt="Cinque Terre" width="300" height="380">
+                                    <p type="reset" onclick="location.href='enquiry.html'" alt="Click to purchase" class="image-footer  hvr-icon-forward">$3.00 ea - min 10</p>
                                     <h3 class="text-center">Subheader</h3>
-                                    <hr style="margin: 10px 40px;"></hr>
+                                    <hr style="margin: 10px 40px;">
                                     <p class="text-center">
                                         Hier kommt alle die passende text rein.
                                         Aber nur was wichtig ist, alles ubrigens kommt morgen. Wenn es
@@ -397,9 +569,9 @@
                             <div class="col-sm-4">
                                 <div class=" section">
                                     <img src="images/bee.jpg" class="img-rounded image" alt="Cinque Terre" width="300" height="380">
-                                    <p type="reset" onclick="location.href='enquiry.html'" class="image-footer  hvr-icon-forward">$3.00 per card - Minimum 10</p>
+                                    <p type="reset" onclick="location.href='enquiry.html'" alt="Click to purchase" class="image-footer  hvr-icon-forward">$3.00 ea - min 10</p>
                                     <h3 class="text-center">Subheader</h3>
-                                    <hr style="margin: 10px 40px;"></hr>
+                                    <hr style="margin: 10px 40px;">
                                     <p class="text-center">
                                         Hier kommt alle die passende text rein.
                                         Aber nur was wichtig ist, alles ubrigens kommt morgen. Wenn es
@@ -411,9 +583,9 @@
                             <div class="col-sm-4">
                                 <div class="section">
                                     <img src="images/dress.jpg" class="img-rounded image" alt="Cinque Terre" width="300" height="380">
-                                    <p type="reset" onclick="location.href='enquiry.html'" class="image-footer  hvr-icon-forward">$3.00 per card - Minimum 10</p>
+                                    <p type="reset" onclick="location.href='enquiry.html'" alt="Click to purchase" class="image-footer  hvr-icon-forward">$3.00 ea - min 10</p>
                                     <h3 class="text-center">Subheader</h3>
-                                    <hr style="margin: 10px 40px;"></hr>
+                                    <hr style="margin: 10px 40px;">
                                     <p class="text-center">
                                         Hier kommt alle die passende text rein.
                                         Aber nur was wichtig ist, alles ubrigens kommt morgen. Wenn es
@@ -422,20 +594,19 @@
                                     </p>
                                 </div>
                             </div>
-                        </div>
-                        <i id="other-expand-btn" onclick="expand_panel('other');" class="fa fa-chevron-circle-down fa-3x hvr-grow clickable"></i>
-                        <i id="other-deflate-btn" onclick="deflate_panel('other');" class="fa fa-chevron-circle-up fa-3x hvr-grow clickable" style="display:none;"></i>
-                    </div>
+                        </div>-->
+            <!--Buttons to be used when extra cotent is added-->
+            <!--<i id="other-expand-btn" onclick="expand_panel('other');" class="fa fa-chevron-circle-down fa-3x hvr-grow clickable"></i>
+            <i id="other-deflate-btn" onclick="deflate_panel('other');" class="fa fa-chevron-circle-up fa-3x hvr-grow clickable" style="display:none;"></i>-->
+            <!--</div>
                 </div>
-            </div>
+            </div>-->
         </div>
     </div>
 
-    <!-- Modal -->
+    <!-- Modal showing phone number -->
     <div id="myModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-sm">
-
-            <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -449,6 +620,7 @@
         </div>
     </div>
 
+    <!--Footer-->
     <div class="container-fluid">
         <footer class="panel-footer">
             <a style="display:inline-block" href="#">Home  |  </a>
@@ -459,6 +631,21 @@
     </div>
 
     <script>
+
+        //Ran when cards.html is opened to show a specific card type (e.g. Anniversary)
+        function open_section() {
+            var GET = {};
+            var query = window.location.search.substring(1).split("&");
+
+            if (query[0] === "") return;
+            var param = query[0].split("=");
+
+            document.getElementById('wedding').className = document.getElementById(param[1]).className;
+            document.getElementById('weddingpill').className = "";
+            document.getElementById(param[1]).className = document.getElementById(param[1]).className + " in active";
+            document.getElementById(param[1] + "pill").className = "active";
+        }
+
         function expand_panel(name) {
             rows = document.getElementsByName("row-extra-" + name);
             for (i = 0; i < rows.length; i++) {
