@@ -42,7 +42,7 @@ hr {
 
 
 h2 {
-    font-size: 50px;
+    font-size: 58px;
     font-weight:400;
     text-align: center;
     color:#ffffff;
@@ -52,12 +52,18 @@ h3{
     font-size: 34px;
      font-weight:400;
      color:#ffffff;
+    margin-top:0px;
 }
 
 p{
     font-weight:500;
     font-size: 18px;
 
+}
+
+.stylised{
+   font-family: 'Great Vibes', cursive;
+   font-size:24px;
 }
 
 
@@ -70,16 +76,9 @@ p{
     margin: 10px 0px 10px 0px;
     text-align: center;
     background: rgba(0,0,0,0.075);
-    padding:20px;
+    padding:20px 20px;
     border-radius: 8px;
-
-    max-height:800px;
     height: auto;
-}
-
-
-.box{
-    padding: 0px 5px 0px 5px;
 }
 
 panel, jumbotron{
@@ -123,7 +122,7 @@ panel, jumbotron{
     background-color:rgba(128, 128, 128, 0.50);
     text-align: center;
     padding:4px;
-    margin: 10px;
+    margin: 10px 0px 0px 0px;
 }
 
 .panel-image {
@@ -131,18 +130,21 @@ panel, jumbotron{
 }
 
 .image {
-    margin: 0px 0px 0px 0px;
+
     border: 0px solid #ffffff;	
     padding:0px;
 }
 
-.imagediv {
-    height: 425px;
+.image-small {
+    margin: 0px 0px 0px 0px;
+    border: 0px solid #ffffff;	
+    padding:0px;
+    display: inline;
+    max-width:100%;
+    max-height:50px;
 }
 
-.imagedivwide {
-    height: 300px;
-}
+
 
 img {
     margin: 10px 0px 0px 0px;
@@ -154,11 +156,6 @@ img {
     margin: auto;
 }
 
-.image-helper{
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
-}
 
 .image-footer{
     width:200px;
@@ -189,8 +186,8 @@ img {
    max-width:100%;
    margin: 10px auto;
    font-size:20px;
-  -webkit-border-radius: 4;
-  -moz-border-radius: 4;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
   border-radius: 4px;
   color: #ffffff;
   padding: 8px 20px 7px 20px;

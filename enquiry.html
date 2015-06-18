@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <title>Make It You - Personalised Invitations for any Occasion- Enquiry</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
@@ -9,13 +9,12 @@
     <link rel="stylesheet" type="text/css" href="css/makeityou.enquiry.css">
     <link rel="stylesheet" type="text/css" href="css/makeityou.nav.css">
     <link href="css/hover.css" rel="stylesheet" media="all">
-    <link href='http://fonts.googleapis.com/css?family=Josefin+Slab:400,400italic,500,600,700,700italic' rel='stylesheet' type='text/css'>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
     <link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
-    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
-    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
 
 
 
@@ -64,41 +63,56 @@
             <div class="panel panel-normal">
                 <h2>Enquiry</h2>
                 <hr style="margin: 10px 40px;">
-                <form action="takeform.php" method="post" enctype="text/plain">
+                <p>
+                    To get in contact please fill out the form, we can then discuss your exact specifications <br />further either by phone or email.<br />
+                    Don't be afraid to request something that isn't listed on the site, anything is possible so just ask!
+                </p>
+                <hr style="margin: 10px 40px;">
+                <form name="enquiryform" action="takeform.php" method="post">
                     <p><input name="email" size="64" maxlength="64" placeholder="Your Email Address" /></p>
-                    <p><input name="realname" size="64" maxlength="64" placeholder="Your name" /></p>
+                    <p><input name="name" size="64" maxlength="64" placeholder="Your name" /></p>
 
                     <!--Enquiry subject drop down-->
-                    <p><select id="subject" name="subject" onchange="update_cardtype()">
+                    <p>
+                        <select id="subject" name="subject" onchange="update_cardtype()">
                             <option value="" disabled selected>Select your enquiry type</option>
-                            <option value="question">Question</option>
-                            <option value="product">Product</option>
-                            <option value="purchase">Purchase</option>
-                            <option value="other">Other</option>
-                        </select></p>
+                            <option value="Question">Question</option>
+                            <option value="Product">Product</option>
+                            <option value="Purchase">Purchase</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </p>
                     <!--Card type drop down-->
-                    <p><select id="cardtype" name="cardtype" onchange="update_invitations()" style="display:none;">
+                    <p>
+                        <select id="cardtype" name="cardtype" onchange="update_invitations()" style="display:none;">
                             <option value="" disabled selected>Select your invitation type</option>
-                            <option value="question">Wedding</option>
-                            <option value="product">Anniversary</option>
-                            <option value="purchase">Birthday</option>
-                            <option value="purchase">Baby shower</option>
-                            <option value="other">Other</option>
-                        </select></p>
+                            <option value="Wedding">Wedding</option>
+                            <option value="Anniversary">Anniversary</option>
+                            <option value="Birthday">Birthday</option>
+                            <option value="Babyshower">Baby shower</option>
+                            <option value="Thankyou">Thank you</option>
+                            <option value="Savethedate">Save the date</option>
+                            <!--<option value="other">Other</option>-->
+                        </select>
+                    </p>
+                    <p><input id="promo" name="promo" size="64" maxlength="64" placeholder="Promo code (if you have one)" style="display:none;" /></p>
 
+                    <!--Div containing value of card chosen-->
+                    <p style="display:none;"><input id="carddiv" name="cardselected" value="none" size="64" maxlength="64"></p>
                     <!--Multiple panels for each card type-->
-
                     <!--Wedding panel-->
-                    <div name="cardpanel" id="weddingpanel" class="panel panel-alt" style="max-width:100%; width:526px; margin:10px auto; display:none;" >
-                        <p style="font-size:16px; margin:8px 0px 0px 0px;">Choose the card you'd like to enquire about<br>
-                        (Leave blank if you'd like a unique one made.)</p>
+                    <div name="cardpanel" id="weddingpanel" class="panel panel-alt" style="max-width:100%; width:526px; margin:10px auto; display:none;">
+                        <p style="font-size:16px; margin:8px 0px 0px 0px;">
+                            Choose the card you'd like to enquire about<br>
+                            (Leave blank if you'd like a unique one made.)
+                        </p>
                         <div style="margin:auto;">
-                            <div class="mini-image" onclick="select_card('wedding', 0)"><img name="weddingcard" id="wedding0" src="images/wedding/blackboardhearts.jpg" class="img-rounded image"><p class="image-footer ">$3.00</p></div>
-                            <div class="mini-image" onclick="select_card('wedding', 1)"><img name="weddingcard" id="wedding1" src="images/wedding/dress.jpg" class="img-rounded image"><p class="image-footer ">$3.00</p></div>
-                            <div class="mini-image" onclick="select_card('wedding', 2)"><img name="weddingcard" id="wedding2" src="images/wedding/fan.jpg" class="img-rounded image"><p class="image-footer ">$3.00</p></div>
-                            <div class="mini-image" onclick="select_card('wedding', 3)"><img name="weddingcard" id="wedding3" src="images/wedding/heartswithsuit.jpg" class="img-rounded image"><p class="image-footer ">$3.00</p></div>
-                            <div class="mini-image" onclick="select_card('wedding', 4)"><img name="weddingcard" id="wedding4" src="images/wedding/redheart.jpg" class="img-rounded image"><p class="image-footer ">$3.00</p></div>
-                            <div class="mini-image" onclick="select_card('wedding', 5)"><img name="weddingcard" id="wedding5" src="images/wedding/rustic.jpg" class="img-rounded image"><p class="image-footer ">$3.00</p></div>
+                            <div class="mini-image" onclick="select_card('wedding', 0)"><img name="weddingcard" id="wedding0" alt="blackboard hearts" src="images/wedding/blackboardhearts.jpg" class="img-rounded image"><p class="image-footer ">$3.00</p></div>
+                            <div class="mini-image" onclick="select_card('wedding', 1)"><img name="weddingcard" id="wedding1" alt="dress" src="images/wedding/dress.jpg" class="img-rounded image"><p class="image-footer ">$3.50</p></div>
+                            <div class="mini-image" onclick="select_card('wedding', 2)"><img name="weddingcard" id="wedding2" alt="japanese" src="images/wedding/fan.jpg" class="img-rounded image"><p class="image-footer ">$3.00</p></div>
+                            <div class="mini-image" onclick="select_card('wedding', 3)"><img name="weddingcard" id="wedding3" alt="heart crossed lovers" src="images/wedding/heartswithsuit.jpg" class="img-rounded image"><p class="image-footer ">$3.00</p></div>
+                            <div class="mini-image" onclick="select_card('wedding', 4)"><img name="weddingcard" id="wedding4" alt="sparkly red heart" src="images/wedding/redheart.jpg" class="img-rounded image"><p class="image-footer ">$2.50</p></div>
+                            <div class="mini-image" onclick="select_card('wedding', 5)"><img name="weddingcard" id="wedding5" alt="rustic" src="images/wedding/rustic.jpg" class="img-rounded image"><p class="image-footer ">$2.50</p></div>
                         </div>
                     </div>
                     <!--Anniversary panel-->
@@ -108,11 +122,9 @@
                             (Leave blank if you'd like a unique one made.)
                         </p>
                         <div style="margin:auto;">
-                            <div class="mini-image" onclick="select_card('anniversary', 0)"><img name="anniversarycard" id="anniversary0" src="images/hearts.jpg" class="img-rounded image" width="100" height="120"><p class="image-footer ">$3.00</p></div>
-                            <div class="mini-image" onclick="select_card('anniversary', 1)"><img name="anniversarycard" id="anniversary1" src="images/bee.jpg" class="img-rounded image" width="100" height="120"><p class="image-footer ">$3.00</p></div>
-                            <div class="mini-image" onclick="select_card('anniversary', 2)"><img name="anniversarycard" id="anniversary2" src="images/dress.jpg" class="img-rounded image" width="100" height="120"><p class="image-footer ">$3.00</p></div>
-                            <div class="mini-image" onclick="select_card('anniversary', 3)"><img name="anniversarycard" id="anniversary3" src="images/bee.jpg" class="img-rounded image" width="100" height="120"><p class="image-footer ">$3.00</p></div>
-                            <div class="mini-image" onclick="select_card('anniversary', 4)"><img name="anniversarycard" id="anniversary4" src="images/hearts.jpg" class="img-rounded image" width="100" height="120"><p class="image-footer ">$3.00</p></div>
+                            <div class="mini-image" onclick="select_card('anniversary', 0)"><img name="anniversarycard" id="anniversary0" alt="25year" src="images/anniversary/25year.jpg" class="img-rounded image"><p class="image-footer ">$3.00</p></div>
+                            <div class="mini-image" onclick="select_card('anniversary', 1)"><img name="anniversarycard" id="anniversary1" alt="hearts" src="images/anniversary/hearts.jpg" class="img-rounded image"><p class="image-footer ">$3.50</p></div>
+
                         </div>
                     </div>
                     <!--Birthday panel-->
@@ -122,11 +134,12 @@
                             (Leave blank if you'd like a unique one made.)
                         </p>
                         <div style="margin:auto;">
-                            <div class="mini-image" onclick="select_card('birthday', 0)"><img name="birthdaycard" id="birthday0" src="images/hearts.jpg" class="img-rounded image" width="100" height="120"><p class="image-footer ">$3.00</p></div>
-                            <div class="mini-image" onclick="select_card('birthday', 1)"><img name="birthdaycard" id="birthday1" src="images/bee.jpg" class="img-rounded image" width="100" height="120"><p class="image-footer ">$3.00</p></div>
-                            <div class="mini-image" onclick="select_card('birthday', 2)"><img name="birthdaycard" id="birthday2" src="images/dress.jpg" class="img-rounded image" width="100" height="120"><p class="image-footer ">$3.00</p></div>
-                            <div class="mini-image" onclick="select_card('birthday', 3)"><img name="birthdaycard" id="birthday3" src="images/bee.jpg" class="img-rounded image" width="100" height="120"><p class="image-footer ">$3.00</p></div>
-                            <div class="mini-image" onclick="select_card('birthday', 4)"><img name="birthdaycard" id="birthday4" src="images/hearts.jpg" class="img-rounded image" width="100" height="120"><p class="image-footer ">$3.00</p></div>
+                            <div class="mini-image" onclick="select_card('birthday', 0)"><img name="birthdaycard" id="birthday0" alt="bee" src="images/birthday/bee.jpg" class="img-rounded image"><p class="image-footer ">$2.80</p></div>
+                            <div class="mini-image" onclick="select_card('birthday', 1)"><img name="birthdaycard" id="birthday1" alt="blue balloons" src="images/birthday/blueballoons.jpg" class="img-rounded image"><p class="image-footer ">$2.50</p></div>
+                            <div class="mini-image" onclick="select_card('birthday', 2)"><img name="birthdaycard" id="birthday2" alt="one year crown" src="images/birthday/oneyearcrown.jpg" class="img-rounded image"><p class="image-footer ">$2.00</p></div>
+                            <div class="mini-image" onclick="select_card('birthday', 3)"><img name="birthdaycard" id="birthday3" alt="pirate" src="images/birthday/pirate.jpg" class="img-rounded image"><p class="image-footer ">$2.00</p></div>
+                            <div class="mini-image" onclick="select_card('birthday', 4)"><img name="birthdaycard" id="birthday4" alt="owl" src="images/birthday/owl1.jpg" class="img-rounded image"><p class="image-footer ">$3.20</p></div>
+                            <div class="mini-image" onclick="select_card('birthday', 5)"><img name="birthdaycard" id="birthday5" alt="yellow balloons" src="images/birthday/yellowballoons.jpg" class="img-rounded image"><p class="image-footer ">$2.50</p></div>
                         </div>
                     </div>
                     <!--Baby shower panel-->
@@ -136,15 +149,36 @@
                             (Leave blank if you'd like a unique one made.)
                         </p>
                         <div style="margin:auto;">
-                            <div class="mini-image" onclick="select_card('babyshower', 0)"><img name="babyshowercard" id="babyshower0" src="images/hearts.jpg" class="img-rounded image" width="100" height="120"><p class="image-footer ">$3.00</p></div>
-                            <div class="mini-image" onclick="select_card('babyshower', 1)"><img name="babyshowercard" id="babyshower1" src="images/bee.jpg" class="img-rounded image" width="100" height="120"><p class="image-footer ">$3.00</p></div>
-                            <div class="mini-image" onclick="select_card('babyshower', 2)"><img name="babyshowercard" id="babyshower2" src="images/dress.jpg" class="img-rounded image" width="100" height="120"><p class="image-footer ">$3.00</p></div>
-                            <div class="mini-image" onclick="select_card('babyshower', 3)"><img name="babyshowercard" id="babyshower3" src="images/bee.jpg" class="img-rounded image" width="100" height="120"><p class="image-footer ">$3.00</p></div>
-                            <div class="mini-image" onclick="select_card('babyshower', 4)"><img name="babyshowercard" id="babyshower4" src="images/hearts.jpg" class="img-rounded image" width="100" height="120"><p class="image-footer ">$3.00</p></div>
+                            <div class="mini-image" onclick="select_card('babyshower', 0)"><img name="babyshowercard" id="babyshower0" alt="its a boy" src="images/babyshower/itsaboy.jpg" class="img-rounded image"><p class="image-footer ">$2.00</p></div>
+                            <div class="mini-image" onclick="select_card('babyshower', 1)"><img name="babyshowercard" id="babyshower1" alt="nappy" src="images/babyshower/nappy.jpg" class="img-rounded image"><p class="image-footer ">$2.75</p></div>
+                            <div class="mini-image" onclick="select_card('babyshower', 2)"><img name="babyshowercard" id="babyshower2" alt="pram" src="images/babyshower/pinkpram.jpg" class="img-rounded image"><p class="image-footer ">$2.00</p></div>
+                        </div>
+                    </div>
+                    <!--Thank you panel-->
+                    <div name="cardpanel" id="thankyoupanel" class="panel panel-alt" style="max-width:100%; width:526px; margin:10px auto; display:none;">
+                        <p style="font-size:16px; margin:8px 0px 0px 0px;">
+                            Choose the card you'd like to enquire about<br>
+                            (Leave blank if you'd like a unique one made.)
+                        </p>
+                        <div style="margin:auto;">
+                            <div class="mini-image" onclick="select_card('thankyou', 0)"><img name="thankyoucard" id="thankyou0" alt="gold and black hearts" src="images/thankyou/goldandblackhearts.jpg" class="img-rounded image"><p class="image-footer ">$3.00</p></div>
+                            <div class="mini-image" onclick="select_card('thankyou', 1)"><img name="thankyoucard" id="thankyou1" alt="three hearts" src="images/thankyou/threehearts.jpg" class="img-rounded image"><p class="image-footer ">$2.00</p></div>
+                        </div>
+                    </div>
+                    <!--Save the date panel-->
+                    <div name="cardpanel" id="savethedatepanel" class="panel panel-alt" style="max-width:100%; width:526px; margin:10px auto; display:none;">
+                        <p style="font-size:16px; margin:8px 0px 0px 0px;">
+                            Choose the card you'd like to enquire about<br>
+                            (Leave blank if you'd like a unique one made.)
+                        </p>
+                        <div style="margin:auto;">
+                            <div class="mini-image" onclick="select_card('savethedate', 0)"><img name="savethedatecard" id="savethedate0" alt="cartoon" src="images/savethedate/cartoon.jpg" class="img-rounded image"><p class="image-footer ">$2.30</p></div>
+                            <div class="mini-image" onclick="select_card('savethedate', 1)"><img name="savethedatecard" id="savethedate1" alt="green" src="images/savethedate/green.jpg" class="img-rounded image"><p class="image-footer ">$3.00</p></div>
+                            <div class="mini-image" onclick="select_card('savethedate', 2)"><img name="savethedatecard" id="savethedate2" alt="squares" src="images/savethedate/squares.jpg" class="img-rounded image"><p class="image-footer ">$2.00</p></div>
                         </div>
                     </div>
                     <!--Other panel-->
-                    <div name="cardpanel" id="otherpanel" class="panel panel-alt" style="max-width:100%; width:526px; margin:10px auto; display:none;">
+                    <!--<div name="cardpanel" id="otherpanel" class="panel panel-alt" style="max-width:100%; width:526px; margin:10px auto; display:none;">
                         <p style="font-size:16px; margin:8px 0px 0px 0px;">
                             Choose the card you'd like to enquire about<br>
                             (Leave blank if you'd like a unique one made.)
@@ -156,10 +190,10 @@
                             <div class="mini-image" onclick="select_card('other', 3)"><img name="othercard" id="other3" src="images/bee.jpg" class="img-rounded image" width="100" height="120"><p class="image-footer ">$3.00</p></div>
                             <div class="mini-image" onclick="select_card('other', 4)"><img name="othercard" id="other4" src="images/hearts.jpg" class="img-rounded image" width="100" height="120"><p class="image-footer ">$3.00</p></div>
                         </div>
-                    </div>
-                    
+                    </div>-->
+
                     <p><i>Please enter the text of your message in the field that follows.</i></p>
-                    <textarea name="body" rows="10" cols="72"></textarea>
+                    <textarea name="message" rows="10" cols="72"></textarea>
                     <p><input class="makeityou-button hvr-grow-shadow" type="submit" name="send" value="Place enquiry" /></p>
                 </form>
             </div>
@@ -175,7 +209,7 @@
                     <h2 style="color:#000000" class="modal-title">Phone</h2>
                 </div>
                 <div class="modal-body">
-                    <p style="color:#000000; font-size:20px;">Contact Rachel at 027 714 3438</p>
+                    <p style="color:#000000; font-size:20px;">Contact Rachel at <br />027 714 3438</p>
                 </div>
             </div>
 
@@ -185,10 +219,10 @@
     <!--Footer-->
     <div class="container-fluid">
         <footer class="panel-footer">
-            <a style="display:inline-block" href="#">Home  |  </a>
-            <a style="display:inline-block" href="#">About  |  </a>
-            <a style="display:inline-block" href="#">Contact</a>
-            <p>Posted by: Rachel Hannah Te Tau - Contact information: <a href="mailto:rachel.x@hotmail.co.nz">rachel.x@hotmail.co.nz</a>.</p>
+            <a style="display:inline-block" href="index.html">Home</a><p style="display:inline-block">  |  </p>
+            <a style="display:inline-block" href="about.html">About</a><p style="display:inline-block">  |  </p>
+            <a style="display:inline-block" href="enquiry.html">Contact</a>
+            <p>Website created by <a href="mailto:vincent.tetau@gmail.com">Vincent Te Tau</a>. <br /> Make it you: Rachel Hannah Te Tau - Contact information: <a href="mailto:rachel@makeityou.co.nz">rachel@makeityou.co.nz</a>.</p>
         </footer>
     </div>
 
@@ -203,22 +237,17 @@
 
         var currentCard = null;
 
-        //Form validation
-        var frmvalidator = new Validator("contactform");
-        frmvalidator.addValidation("name", "req", "Please provide your name");
-        frmvalidator.addValidation("email", "req", "Please provide your email");
-        frmvalidator.addValidation("email", "email",
-          "Please enter a valid email address");
-
         //Shows cardtype dropdown if purchase subject is chosen, otherwhise it hides it
         function update_cardtype() {
             subject = document.getElementById('subject');
 
             if (subject.options[subject.selectedIndex].innerHTML == "Purchase") {
                 document.getElementById('cardtype').style.display = "inline";
+                document.getElementById('promo').style.display = "inline";
                 update_invitations();
             } else {
                 document.getElementById('cardtype').style.display = "none";
+                document.getElementById('promo').style.display = "none";
                 card_panels = document.getElementsByName('cardpanel');
 
                 for (i = 0; i < card_panels.length; i++) {
@@ -241,19 +270,18 @@
             else if (subject.options[subject.selectedIndex].innerHTML == "Anniversary") document.getElementById('anniversarypanel').style.display = "block";
             else if (subject.options[subject.selectedIndex].innerHTML == "Birthday") document.getElementById('birthdaypanel').style.display = "block";
             else if (subject.options[subject.selectedIndex].innerHTML == "Baby shower") document.getElementById('babyshowerpanel').style.display = "block";
+            else if (subject.options[subject.selectedIndex].innerHTML == "Thank you") document.getElementById('thankyoupanel').style.display = "block";
+            else if (subject.options[subject.selectedIndex].innerHTML == "Save the date") document.getElementById('savethedatepanel').style.display = "block";
             else if (subject.options[subject.selectedIndex].innerHTML == "Other") document.getElementById('otherpanel').style.display = "block";
 
         }
 
         //Selects a certain card, the border colour is changed and it becomes less opaque
         function select_card(type, index) {
-            if (currentCard != document.getElementById(type + index)) currentCard = document.getElementById(type + index);
-            else currentCard = null;
-
             cards = document.getElementsByName(type + "card");
 
-            for (i = 0; i <= cards.length; i++) {
-                if (i == index) {
+            for (i = 0; i < cards.length; i++) {
+                if (i == index && currentCard != cards[index]) {
                     cards[i].style.opacity = 1;
                     cards[i].style.border = '2px solid #FFFFFF';
                 } else {
@@ -262,13 +290,33 @@
                 }
             }
 
+            //Set the currentCard and the carddiv value
+            if (currentCard != cards[index]) {
+                currentCard = cards[index];
+                document.getElementById("carddiv").value = currentCard.alt;
+            } else {
+                currentCard = null;
+                document.getElementById("carddiv").value = "none";
+            }
 
         }
 
 
     </script>
 
+    <!--Google analytics-->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
+        ga('create', 'UA-64121805-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
 
 </body>
 </html>
