@@ -1,0 +1,270 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Make It You - Personalised Invitations for any Occasion - Scrapbooks</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/makeityou.main.css">
+    <link rel="stylesheet" type="text/css" href="css/makeityou.scrapbook.css">
+    <link rel="stylesheet" type="text/css" href="css/makeityou.nav.css">
+    <link rel="stylesheet" type="text/css" href="css/makeityou.pills.css">
+    <link rel="stylesheet" href="css/pictureflip.css">
+    <link href="css/hover.css" rel="stylesheet" media="all">
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+    <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="script/modernizr.js"></script>
+    <script src="jquery.pictureflip.js"></script>
+
+</head>
+<body onload="open_section()">
+
+    <!--Main header and navigation bar-->
+    <div class="container-fluid">
+        <nav class="navbar navbar-default" style="margin-bottom: 20px;">
+            <div class="container-fluid">
+                    <div class="navbar-header">
+                        <!--Collapse button, only visible when window is small-->
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <h1 style="padding:0px 75px 0px 25px; ">Make it you</h1>
+                    </div>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <!--Main links-->
+                        <ul class="nav navbar-nav" style="margin-top:45px;">
+                            <li class="nav-button"><a href="index.html" class="hvr-underline-reveal">Home</a></li>
+                            <li class="nav-button"><a href="about.html" class="hvr-underline-reveal">About</a></li>
+                            <li class="active  nav-button dropdown"><a data-toggle="dropdown" class="dropdown-toggle hvr-underline-reveal">Selection <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="cards.html">Cards</a></li>
+                                    <li><a href="scrapbooks.html">Scrapbooks</a></li>
+                                </ul></li>
+                            <li class="nav-button"><a href="enquiry.html" class="hvr-underline-reveal">Enquiry</a></li>
+                        </ul>
+                        <!--Icon links to facebook, e-mail and phone-->
+                        <ul class="nav navbar-nav navbar-right" style="margin-top:45px;">
+                            <li class="nav-button-small"><a href="https://www.facebook.com/makeityouinvitations?fref=ts"><i class="fa fa-facebook-square"></i></a></li>
+                            <li class="nav-button-small"><a href="mailto:rachel.x@hotmail.co.nz"><i class="fa fa-envelope-o"></i></a></li>
+                            <li class="nav-button-small"><a href="#" type="button" data-toggle="modal" data-target="#myModal"><i class="fa fa-phone"></i></a></li>
+                        </ul>
+                    </div>
+            </div>
+        </nav>
+    </div>
+
+    <!--Main content area-->
+    <div class="container">
+
+        <!--Jumbotron containing description and a pill navigator-->
+        <div class="row">
+                <div class="panel-alt">
+                    <h2>Scrapbooks</h2>
+                    <hr style="margin: 10px 40px;">
+                    <p>
+                        Your Scrapbook will be customised to your specifications, just let us know what colour<br />
+                        scheme and theme you'd like aswell as any other requirements you have and we'll work something<br />
+                        perfect out for you! <br /> <br />
+
+                        The possibilities are endless so please enquire!<br />
+                        Prices are as follows: <br />
+                        <br />
+                        Large: 20 pages (10 leaves) - $300<br />
+                        Large: 10 pages (5  leaves) - $200<br />
+                        Small: 20 pages (10 leaves) - $180<br />
+                        Small: 10 pages (5  leaves) - $120<br />
+                        <br />
+                    </p>
+                        <h3>Check out the wedding example below!</h3>
+                        <br /><br />
+                    <p>
+                        The Scrapbook can either be picked up in Auckland central, or shipped to your location.<br />
+                        Note: Photos must be provided, otherwise we can potentially look at printing them out<br />
+                        for an extra cost<br />
+                    </p>
+
+                    <!-- To be implemented when more scrapbooks are uploaded. -->
+                    <!--<ul class="nav nav-pills">
+                        <li id="weddingpill" class="active"><a class="pill-link" data-toggle="pill" href="#wedding">Wedding</a></li>
+                        <li id="familypill"><a class="pill-link" data-toggle="pill" href="#family">Family</a></li>
+                        <li id="otherpill"><a class="pill-link" data-toggle="pill" href="#family">Family</a></li>
+                    </ul>-->
+                </div>
+        </div>
+
+        <!--Each pane contains a different type of scrapbook-->
+        <!--Scrapbooks are displayed using a modified version of the flipbook plugin-->
+        <div class="tab-content" id="pills">
+            <!--Wedding pane-->
+            <div class="row tab-pane fade in active" id="wedding">
+                    <div class="panel panel-normal">
+                        <h2 class="text-center;">Wedding</h2>
+                        <hr style="margin: 10px 40px;">
+                        <div class="row">
+                                <div class="section">
+                                    <p class="text-center">Click to flick through pages</p>
+
+                                    <!--Flipbook containing a slide for each page of the scrapbook-->
+                                    <div id="flipbook">
+                                        <div class="slide">
+                                            <img src="images/scrapbook/wedding/page1.jpg" alt="Wedding scrapbook title page" />
+                                        </div>
+                                        <div class="slide">
+                                            <img src="images/scrapbook/wedding/page2.jpg" alt="Wedding scrapbook girls getting ready page" />
+                                        </div>
+                                        <div class="slide">
+                                            <img src="images/scrapbook/wedding/page3.jpg" alt="Wedding scrapbook boys getting ready page" />
+                                        </div>
+                                        <div class="slide">
+                                            <img src="images/scrapbook/wedding/page4.jpg" alt="Wedding scrapbook ceremony page" />
+                                        </div>
+                                        <div class="slide">
+                                            <img src="images/scrapbook/wedding/page5.jpg" alt="Wedding scrapbook vows page" />
+                                        </div>
+                                        <div class="slide">
+                                            <img src="images/scrapbook/wedding/page6.jpg" alt="Wedding scrapbook family page" />
+                                        </div>
+                                        <div class="slide">
+                                            <img src="images/scrapbook/wedding/page7.jpg" alt="Wedding scrapbook family page" />
+                                        </div>
+                                        <div class="slide">
+                                            <img src="images/scrapbook/wedding/page8.jpg" alt="Wedding scrapbook bridal group page" />
+                                        </div>
+                                        <div class="slide">
+                                            <img src="images/scrapbook/wedding/page9.jpg" alt="Wedding scrapbook reception page" />
+                                        </div>
+                                        <div class="slide">
+                                            <img src="images/scrapbook/wedding/page10.jpg" alt="Wedding scrapbook first dance page" />
+                                        </div>
+                                        <div class="slide">
+                                            <img src="images/scrapbook/wedding/page11.jpg" alt="Wedding scrapbook final page" />
+                                        </div>
+                                    </div>
+
+                                    <hr style="margin: 10px 40px;">
+
+                                    <p class="text-center">
+                                        This handcrafted Scrapbook is personalised to my own wedding and shows examples of a few<br/>
+                                        different styles that could be incorporated into your own scrapbook.<br /><br />
+
+                                        You could choose to do it with each page representing a different aspect of the <br />
+                                        wedding (in this case starting with before the wedding and going through each <br />
+                                        part of the day with the last page incorporating the original wedding invite,<br />
+                                        save the date magnet, name tags etc used on the day itself as a keepsake).<br /><br />
+                                        You can choose to use many different colours and have each page completely<br />
+                                        different like this one, or you could choose a few colours and keep the<br />
+                                        exact layout for every page. <br /> <br />
+
+                                        There are so many options so please enquire about your own one today!
+
+                                    </p>
+
+                                    <a type="button" class="makeityou-button hvr-grow-shadow" style="margin:0px;" href="enquiry.html">Enquire now<span class="glyphicons glyphicons-chevron-right"></span></a>
+                                </div>
+                            </div>
+                </div>
+            </div>
+
+            <!--Family pane-->
+
+            <!--<div class="row tab-pane fade" id="family">
+                <div class="col-sm-12">
+                    <div class="panel panel-blue">
+                        <h2 class="text-center">Family</h2>
+                        <hr style="margin: 0px 40px;">
+                        <div class="row">
+
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+
+            <!--Other pane to be usted when extra content is added-->
+            <!--Other pane-->
+            <!--<div class="row tab-pane fade" id="other">
+                <div class="col-sm-12">
+                    <div class="panel panel-blue">
+                        <h2 class="text-center">Other occasions</h2>
+                        <hr style="margin: 0px 40px;">
+
+                </div>
+            </div>-->
+        </div>
+    </div>
+
+    <!-- Modal showing phone number -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h2 style="color:#000000" class="modal-title">Phone</h2>
+                </div>
+                <div class="modal-body">
+                    <p style="color:#000000; font-size:20px;">Contact Rachel at <br />027 714 3438</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--Footer-->
+    <div class="container-fluid">
+        <footer class="panel-footer">
+            <a style="display:inline-block" href="index.html">Home</a><p style="display:inline-block">  |  </p>
+            <a style="display:inline-block" href="about.html">About</a><p style="display:inline-block">  |  </p>
+            <a style="display:inline-block" href="enquiry.html">Contact</a>
+            <p>Website created by <a href="mailto:vincent.tetau@gmail.com">Vincent Te Tau</a>. <br /> Make it you: Rachel Hannah Te Tau - Contact information: <a href="mailto:rachel@makeityou.co.nz">rachel@makeityou.co.nz</a>.</p>
+        </footer>
+    </div>
+
+    <script>
+        //Flipbook code
+        $(document).ready(function () {
+            $('#flipbook').pageFlip();
+        });
+
+        function expand_panel(name) {
+            rows = document.getElementsByName("row-extra-" + name);
+            for (i = 0; i < rows.length; i++) {
+                rows[i].style.display = "block";
+            }
+
+            document.getElementById(name + "-expand-btn").style.display = "none";
+            document.getElementById(name + "-deflate-btn").style.display = "block";
+        }
+
+        function deflate_panel(name) {
+            rows = document.getElementsByName("row-extra-" + name);
+            for (i = 0; i < rows.length; i++) {
+                rows[i].style.display = "none";
+            }
+
+            document.getElementById(name + "-expand-btn").style.display = "block";
+            document.getElementById(name + "-deflate-btn").style.display = "none";
+        }
+    </script>
+
+    <!--Google analytics-->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-64121805-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+</body>
+</html>

@@ -40,7 +40,13 @@
                         <ul class="nav navbar-nav" style="margin-top:45px;">
                             <li class="active nav-button"><a href="#" class="hvr-underline-reveal">Home</a></li>
                             <li class="nav-button"><a href="about.html" class="hvr-underline-reveal">About</a></li>
-                            <li class="nav-button"><a href="cards.html" class="hvr-underline-reveal">Cards</a></li>
+                            <li class="nav-button dropdown">
+                                <a data-toggle="dropdown" class="dropdown-toggle hvr-underline-reveal">Selection <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="cards.html">Cards</a></li>
+                                    <li><a href="scrapbooks.html">Scrapbooks</a></li>
+                                </ul>
+                            </li>
                             <li class="nav-button"><a href="enquiry.html" class="hvr-underline-reveal">Enquiry</a></li>
                         </ul>
                         <!--Icon links to facebook, e-mail and phone-->
@@ -60,78 +66,74 @@
 
         <!--Row containing image jumbotron with greeting text-->
         <div class="row">
-            <div class="col-sm-12">
-                <div class="jumbotron panel-image-wedding">
-                    <h2>Welcome</h2>
-                    <hr style="margin: 10px 40px;">
-                    <p>
-                        Want to make your event extra special? Want to really impress your guests?<br>
-                        What better way than to WOW them with a personalized, hand crafted invitation!<br>
-                        Personalized to any event - Wedding, Engagement, Birthday, Baby shower etc<br>
-                    </p>
-                    <hr style="margin: 10px 40px;">
-                    <p>
-                        Browse through some pre-made examples of what your invitations could look like for your special day<br>
-                    </p>
-                    <a type="button" class="makeityou-button-image hvr-grow-shadow" href="cards.html">Our selection<span class="glyphicons glyphicons-chevron-right"></span></a>
-                </div>
+            <div class="jumbotron panel-image-wedding">
+                <h2>Welcome</h2>
+                <hr style="margin: 10px 40px;">
+                <p>
+                    Want to make your event extra special? Want to really impress your guests?<br>
+                    What better way than to WOW them with a personalized, hand crafted invitation!<br>
+                    Personalized to any event - Wedding, Engagement, Birthday, Baby shower etc<br>
+                </p>
+                <hr style="margin: 10px 40px;">
+                <p>
+                    Browse through some pre-made examples of what your invitations could look like for your special day<br>
+                </p>
+                <a type="button" class="makeityou-button-image hvr-grow-shadow" href="cards.html">Our selection<span class="glyphicons glyphicons-chevron-right"></span></a>
             </div>
         </div>
 
         <!--Row containing a brief overview of the available invitations-->
         <div class="row">
-            <div class="col-sm-12">
-                <div class="panel panel-normal">
-                    <h2 class="text-center">Invitations</h2>
-                    <hr style="margin: 0px 40px;">
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <div class="section">
-                                <img src="images/anniversary/hearts.jpg" class="img-rounded image" alt="Red heart anniversary invitation">
+            <div class="panel panel-normal">
+                <h2 class="text-center">Invitations</h2>
+                <hr style="margin: 0px 40px;">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="section">
+                            <img src="images/anniversary/hearts.jpg" class="img-rounded image" alt="Red heart anniversary invitation">
 
-                                <h3 class="text-center" style="margin-top:20px;">Anniversary</h3>
-                                <hr style="margin: 10px 40px;">
-                                <p class="text-center">
-                                    Make your Anniversary celebration extra special with a personalised touch! Match your colours
-                                    and theme with the day to create a unique look you couldn’t buy in store!
-                                    <br /><br /><br /><br />
-                                </p>
-                                
-                                    <a href="cards.html?card_type=anniversary" type="button" class="makeityou-button hvr-grow-shadow">More</a>
-                              
-                            </div>
+                            <h3 class="text-center" style="margin-top:20px;">Anniversary</h3>
+                            <hr style="margin: 10px 40px;">
+                            <p class="text-center">
+                                Make your Anniversary celebration extra special with a personalised touch! Match your colours
+                                and theme with the day to create a unique look you couldn’t buy in store!
+                                <br /><br /><br />
+                            </p>
+
+                            <a href="cards.html?card_type=anniversary" type="button" class="makeityou-button hvr-grow-shadow">More</a>
+
                         </div>
-
-                        <div class="col-sm-4">
-                            <div class="section">
-                                <img src="images/wedding/dress.jpg" class="img-rounded image" alt="White dress wedding invitation">
-                                <h3 class="text-center" style="margin-top:20px;">Wedding</h3>
-                                <hr style="margin: 10px 40px;">
-                                <p class="text-center">
-                                    There is no better way to invite your guests to the most important day of your life than with a unique,
-                                    hand crafted invitation. Not only will you impress, you will have a memory that will last a life time.
-                                    <br /><br />
-                                </p>
-                                <a href="cards.html" type="button" class="makeityou-button hvr-grow-shadow">More</a>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-4">
-                            <div class="section">
-
-                                <img src="images/birthday/bee.jpg" class="img-rounded image" alt="Bumble bee birthday invitation">
-                                <h3 class="text-center" style="margin-top:20px;">Birthday</h3>
-                                <hr style="margin: 10px 40px;">
-                                <p class="text-center">
-                                    Got a special birthday party coming up? Why not invite your guests in style with a hand crafted
-                                    invitation with the theme of the day! Whether it be a child’s princess party, a
-                                    milestone occasion or just a family gathering - the options are endless!
-                                </p>
-                                <a href="cards.html?card_type=birthday" type="button" class="makeityou-button hvr-grow-shadow">More</a>
-                            </div>
-                        </div>
-
                     </div>
+
+                    <div class="col-sm-4">
+                        <div class="section">
+                            <img src="images/wedding/dress.jpg" class="img-rounded image" alt="White dress wedding invitation">
+                            <h3 class="text-center" style="margin-top:20px;">Wedding</h3>
+                            <hr style="margin: 10px 40px;">
+                            <p class="text-center">
+                                There is no better way to invite your guests to the most important day of your life than with a unique,
+                                hand crafted invitation. Not only will you impress, you will have a memory that will last a life time.
+                                <br /><br /><br />
+                            </p>
+                            <a href="cards.html" type="button" class="makeityou-button hvr-grow-shadow">More</a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="section">
+
+                            <img src="images/birthday/bee.jpg" class="img-rounded image" alt="Bumble bee birthday invitation">
+                            <h3 class="text-center" style="margin-top:20px;">Birthday</h3>
+                            <hr style="margin: 10px 40px;">
+                            <p class="text-center">
+                                Got a special birthday party coming up? Why not invite your guests in style with a hand crafted
+                                invitation with the theme of the day! Whether it be a child’s princess party, a
+                                milestone occasion or just a family gathering - the options are endless!
+                            </p>
+                            <a href="cards.html?card_type=birthday" type="button" class="makeityou-button hvr-grow-shadow">More</a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -146,10 +148,12 @@
                     <hr style="margin: 10px 40px;">
                     <h3>Charlie</h3>
                     <p style="font-style:italic;">
-                        <q>Great service friendly and efficient put customers needs as a priority really <br />
-                            appreciate that and would recommend and use the service again!</q>
+                        <q>
+                            Great service friendly and efficient put customers needs as a priority really <br />
+                            appreciate that and would recommend and use the service again!
+                        </q>
                     </p>
-                    <!--<a href="about.html#reviews" type="button" class="makeityou-button hvr-grow-shadow">More reviews<span class="glyphicons glyphicons-chevron-right"></span></a>-->
+                    <a href="about.html#reviews" type="button" class="makeityou-button hvr-grow-shadow">More reviews<span class="glyphicons glyphicons-chevron-right"></span></a>
                 </div>
             </div>
 

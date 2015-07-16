@@ -20,7 +20,7 @@
 
 
 </head>
-<body>
+<body onload="open_section()">
     <!--Main header and navigation bar-->
     <div class="container-fluid">
         <nav class="navbar navbar-default" style="margin-bottom: 20px;">
@@ -40,7 +40,13 @@
                         <ul class="nav navbar-nav" style="margin-top:45px;">
                             <li class="nav-button"><a href="index.html" class="hvr-underline-reveal">Home</a></li>
                             <li class="nav-button"><a href="about.html" class="hvr-underline-reveal">About</a></li>
-                            <li class="nav-button"><a href="cards.html" class="hvr-underline-reveal">Cards</a></li>
+                            <li class="nav-button dropdown">
+                                <a data-toggle="dropdown" class="dropdown-toggle hvr-underline-reveal">Selection <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="cards.html">Cards</a></li>
+                                    <li><a href="scrapbooks.html">Scrapbooks</a></li>
+                                </ul>
+                            </li>
                             <li class="active nav-button"><a href="enquiry.html" class="hvr-underline-reveal">Enquiry</a></li>
                         </ul>
                         <!--Icon links to facebook, e-mail and phone-->
@@ -64,17 +70,21 @@
                 <h2>Enquiry</h2>
                 <hr style="margin: 10px 40px;">
                 <p>
-                    To get in contact please fill out the form, we can then discuss your exact specifications <br />further either by phone or email.<br />
+                    To get in contact please fill out the form, we can then discuss your exact specifications <br />
+                    further either by phone or email.<br /> <br />
+
                     Don't be afraid to request something that isn't listed on the site, anything is possible so just ask!
                 </p>
                 <hr style="margin: 10px 40px;">
                 <form name="enquiryform" action="takeform.php" method="post">
+
+                    <!--Email and name inputs-->
                     <p><input name="email" size="64" maxlength="64" placeholder="Your Email Address" /></p>
                     <p><input name="name" size="64" maxlength="64" placeholder="Your name" /></p>
 
                     <!--Enquiry subject drop down-->
                     <p>
-                        <select id="subject" name="subject" onchange="update_cardtype()">
+                        <select id="subject" name="subject" onchange="update_purchase()">
                             <option value="" disabled selected>Select your enquiry type</option>
                             <option value="Question">Question</option>
                             <option value="Product">Product</option>
@@ -82,6 +92,17 @@
                             <option value="Other">Other</option>
                         </select>
                     </p>
+
+                    <!--Purchase drop down-->
+                    <p>
+                        <select id="purchase" name="purchase" onchange="update_type()" style="display:none;">
+                            <option value="" disabled selected>Select what you'd like to purchase</option>
+                            <option value="Card">Card</option>
+                            <option value="Scrapbook">Scrapbook</option>
+                            <option value="Weddingpackage">Wedding package</option>
+                        </select>
+                    </p>
+
                     <!--Card type drop down-->
                     <p>
                         <select id="cardtype" name="cardtype" onchange="update_invitations()" style="display:none;">
@@ -95,6 +116,8 @@
                             <!--<option value="other">Other</option>-->
                         </select>
                     </p>
+
+                    <!--Input for any promo codes-->
                     <p><input id="promo" name="promo" size="64" maxlength="64" placeholder="Promo code (if you have one)" style="display:none;" /></p>
 
                     <!--Div containing value of card chosen-->
@@ -237,16 +260,61 @@
 
         var currentCard = null;
 
+        //Ran when enquiry.html is opened to show a specific card, if selected
+        function open_section() {
+            var GET = {};
+            var query = window.location.search.substring(1).split("&");
+
+            if (query[0] === "") return;
+            var param = query[0].split("=");
+
+            document.getElementById('cardtype').style.display = "inline";
+            document.getElementById('promo').style.display = "inline";
+            
+            alert(document.getElementById('cardtype').options.indexOf("Wedding"));
+            if (param[1] == "wedding") document.getElementById('cardtype').selectedIndex = document.getElementById('cardtype').options.indexOf("Wedding");
+            //alert(document.getElementById('cardtype').selectedIndex);
+
+        }
+
+        //Shows cardtype dropdown if purchase subject is chosen, otherwise it hides it
+        function update_type() {
+            subject = document.getElementById('purchase');
+
+            // Clear all cardpanels first
+            document.getElementById('cardtype').style.display = "none";
+            document.getElementById('promo').style.display = "none";
+            card_panels = document.getElementsByName('cardpanel');
+
+            for (i = 0; i < card_panels.length; i++) {
+                card_panels[i].style.display = "none";
+            }
+
+            // Check if card or scrapbook were selected and update accordingly
+            if (subject.options[subject.selectedIndex].innerHTML == "Card") {
+                update_invitations();
+            } else if (subject.options[subject.selectedIndex].innerHTML == "Scrapbook") {
+                update_scrapbooks();
+            } else if (subject.options[subject.selectedIndex].innerHTML == "Wedding package") {
+                update_weddingpackage();
+            }
+
+
+
+        }
+
         //Shows cardtype dropdown if purchase subject is chosen, otherwhise it hides it
-        function update_cardtype() {
+        function update_purchase() {
             subject = document.getElementById('subject');
 
             if (subject.options[subject.selectedIndex].innerHTML == "Purchase") {
-                document.getElementById('cardtype').style.display = "inline";
+                document.getElementById('purchase').style.display = "inline";
                 document.getElementById('promo').style.display = "inline";
-                update_invitations();
+                if (document.getElementById('purchase').options[subject.selectedIndex].innerHTML == "Card") update_invitations();
+                else if (document.getElementById('purchase').options[subject.selectedIndex].innerHTML == "Scrapbook") update_scrapbooks();
+
             } else {
-                document.getElementById('cardtype').style.display = "none";
+                document.getElementById('purchase').style.display = "none";
                 document.getElementById('promo').style.display = "none";
                 card_panels = document.getElementsByName('cardpanel');
 
@@ -257,8 +325,21 @@
 
         }
 
+        // To be expanded when more scrapbooks are added
+        function update_scrapbooks() {
+            document.getElementById('promo').style.display = "inline";
+        }
+
+        // To be expanded when Full wedding package is added
+        function update_weddingpackage() {
+            document.getElementById('promo').style.display = "inline";
+        }
+
         //Updates the type of cards shown (e.g. Baby shower)
         function update_invitations() {
+            document.getElementById('cardtype').style.display = "inline";
+            document.getElementById('promo').style.display = "inline";
+
             subject = document.getElementById('cardtype');
             card_panels = document.getElementsByName('cardpanel');
 

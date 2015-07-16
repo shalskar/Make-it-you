@@ -1,38 +1,95 @@
-﻿:root{
+﻿:root {
 }
 
-h2,h3,h4,h5,h6{
-       font-family: 'Great Vibes', cursive;
-       color:#ffffff;
+h2, h3, h4, h5, h6 {
+    font-family: 'Great Vibes', cursive;
+    color: #ffffff;
 }
 
-body,.row,.section{
+body, .row, .section {
     font-family: 'Quicksand', sans-serif;
-       color:#ffffff;
+    color: #ffffff;
 }
 
 body {
     text-align: center;
-    color:#ffffff;
+    color: #ffffff;
     background-image: url('../images/crisp_paper_ruffles_@2X.png');
 }
 
 h1 {
     font-family: 'Great Vibes', cursive;
     font-size: 60px;
-    font-weight:400;
+    font-weight: 400;
     text-align: center;
-    color:#ffffff;
+    color: #ffffff;
 }
 
-.header{
-    background-color:#E77DB9;
-    border-bottom: 1px solid #fe47df ;
+h2 {
+    font-size: 50px;
+    font-weight: 400;
+    text-align: center;
+    color: #ffffff;
+}
 
+h3 {
+    font-size: 34px;
+    font-weight: 400;
+    color: #ffffff;
+    margin-top: 0px;
+}
+
+p {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+/*@media screen and (max-width: 800px) {
+    h1 {
+        font-size: 50px;
+        font-weight: 400;
+    }
+
+    h2 {
+        font-size: 34px;
+        font-weight: 400;
+    }
+
+    h3 {
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 12px;
+    }
+
+    jumbotron {
+        font-size: 16px;
+    }
+
+    .makeityou-button, .makeityou-button:hover,
+    .makeityou-button-alt, .makeityou-button-alt:hover,
+    .makeityou-button-image, .makeityou-button-image:hover {
+        font-size: 14px;
+        font-weight: 400;
+    }
+}*/
+
+.stylised {
+    font-family: 'Great Vibes', cursive;
+    font-size: 24px;
 }
 
 
-hr { 
+.header {
+    background-color: #E77DB9;
+    border-bottom: 1px solid #fe47df;
+}
+
+
+hr {
     border: 0;
     height: 1px;
     background: white;
@@ -40,108 +97,77 @@ hr {
 }
 
 
-
-h2 {
-    font-size: 58px;
-    font-weight:400;
-    text-align: center;
-    color:#ffffff;
+.row {
+    margin: 10px 0px;
 }
 
-h3{
-    font-size: 34px;
-     font-weight:400;
-     color:#ffffff;
-    margin-top:0px;
-}
-
-p{
-    font-weight:500;
-    font-size: 18px;
-
-}
-
-.stylised{
-   font-family: 'Great Vibes', cursive;
-   font-size:24px;
-}
-
-
-.row{
-    margin:10px 0px;
-
-}
-
-.section{
+.section {
     margin: 10px 0px 10px 0px;
     text-align: center;
     background: rgba(0,0,0,0.075);
-    padding:20px 20px;
+    padding: 20px 20px;
     border-radius: 8px;
     height: auto;
 }
 
-panel, jumbotron{
+panel, jumbotron {
     border-radius: 8px;
 }
 
-.panel-normal, .panel-alt, .panel-blue, .panel-image-wedding{
+.panel-normal, .panel-alt, .panel-blue, .panel-image-wedding {
     text-align: center;
     -webkit-box-shadow: 1px 1px 6px 0px rgba(50, 50, 50, 0.48);
-    -moz-box-shadow:    1px 1px 6px 0px rgba(50, 50, 50, 0.48);
-    box-shadow:         1px 1px 6px 0px rgba(50, 50, 50, 0.48);
+    -moz-box-shadow: 1px 1px 6px 0px rgba(50, 50, 50, 0.48);
+    box-shadow: 1px 1px 6px 0px rgba(50, 50, 50, 0.48);
     padding: 4px 20px;
     border-radius: 8px;
+    margin: 5px 0px;
 }
 
-.panel-normal{
-
+.panel-normal {
     background-image: url('../images/eight_horns.png');
-
 }
 
 
-.panel-alt{
+.panel-alt {
     background-image: url('../images/paisley.png');
 }
 
-.panel-image-wedding{
+.panel-image-wedding {
     background-image: url('../images/weddingpic2.jpg');
-    background-position:80% center;
-    background-size:cover;
+    background-position: 80% center;
+    background-size: cover;
     color: #ffffff;
 }
 
-.panel-blue{
+.panel-blue {
     background-image: url('../images/symphony.png');
 }
 
 
 
-.panel-footer{
-    background-color:rgba(128, 128, 128, 0.50);
+.panel-footer {
+    background-color: rgba(128, 128, 128, 0.50);
     text-align: center;
-    padding:4px;
+    padding: 4px;
     margin: 10px 0px 0px 0px;
 }
 
 .panel-image {
-
 }
 
 .image {
-
-    border: 0px solid #ffffff;	
-    padding:0px;
+    border: 0px solid #ffffff;
+    padding: 0px;
 }
 
 .image-small {
     margin: 0px 0px 0px 0px;
-    border: 0px solid #ffffff;	
-    padding:0px;
+    border: 0px solid #ffffff;
+    padding: 0px;
     display: inline;
-    max-width:100%;
-    max-height:50px;
+    max-width: 100%;
+    max-height: 50px;
 }
 
 
@@ -149,67 +175,63 @@ panel, jumbotron{
 img {
     margin: 10px 0px 0px 0px;
     display: inline;
-    max-width:100%;
-    max-height:380px;
+    max-width: 100%;
+    max-height: 380px;
     width: auto;
     height: auto;
     margin: auto;
 }
 
 
-.image-footer{
-    width:200px;
-    max-width:100%;
-    margin:0px auto;
-    background-color:#676767;
+.image-footer {
+    width: 200px;
+    max-width: 100%;
+    margin: 0px auto;
+    background-color: #676767;
     border-radius: 4px;
-    color:#ffffff ;
-    text-decoration:none;
-    font-size:14px;
-    padding:0px 0px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 0px 0px;
     cursor: pointer;
 }
 
 
 
-.clickable{
+.clickable {
     cursor: pointer;
 }
-.card{
-    border: 1px solid #ffffff;	
+
+.card {
+    border: 1px solid #ffffff;
 }
 
 .makeityou-button, .makeityou-button:hover,
 .makeityou-button-alt, .makeityou-button-alt:hover,
 .makeityou-button-image, .makeityou-button-image:hover {
-   width:200px;
-   max-width:100%;
-   margin: 10px auto;
-   font-size:20px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  color: #ffffff;
-  padding: 8px 20px 7px 20px;
-  text-decoration: none;
-  cursor:pointer;
-  border: 0px solid #ffffff ;
+    width: 200px;
+    max-width: 100%;
+    margin: 10px auto;
+    font-size: 20px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    color: #ffffff;
+    padding: 8px 20px 7px 20px;
+    text-decoration: none;
+    cursor: pointer;
+    border: 0px solid #ffffff;
 }
 
-.makeityou-button, .makeityou-button:hover{
-  background: rgba(234, 95, 174, 0.4);
-}
+    .makeityou-button, .makeityou-button:hover {
+        background: rgba(234, 95, 174, 0.4);
+    }
 
-.makeityou-button-alt, .makeityou-button-alt:hover{
-  background: rgba(176, 73, 232, 0.5);
-}
+    .makeityou-button-alt, .makeityou-button-alt:hover {
+        background: rgba(176, 73, 232, 0.5);
+    }
 
-.makeityou-button-image, .makeityou-button-image:hover{
-  background: rgba(255, 255, 255, 0.6);
-  color:#101010;
-}
-
-
-
-
-
+    .makeityou-button-image, .makeityou-button-image:hover {
+        background: rgba(255, 255, 255, 0.6);
+        color: #101010;
+    }

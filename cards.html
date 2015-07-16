@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title>Make It You - Personalised Invitations for any Occasion - Our Range</title>
+    <title>Make It You - Personalised Invitations for any Occasion - Cards</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
@@ -38,7 +38,13 @@
                         <ul class="nav navbar-nav" style="margin-top:45px;">
                             <li class="nav-button"><a href="index.html" class="hvr-underline-reveal">Home</a></li>
                             <li class="nav-button"><a href="about.html" class="hvr-underline-reveal">About</a></li>
-                            <li class="active  nav-button"><a href="cards.html" class="hvr-underline-reveal">Cards</a></li>
+                            <li class="active nav-button dropdown">
+                                <a data-toggle="dropdown" class="dropdown-toggle hvr-underline-reveal">Selection <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="cards.html">Cards</a></li>
+                                    <li><a href="scrapbooks.html">Scrapbooks</a></li>
+                                </ul>
+                            </li>
                             <li class="nav-button"><a href="enquiry.html" class="hvr-underline-reveal">Enquiry</a></li>
                         </ul>
                         <!--Icon links to facebook, e-mail and phone-->
@@ -58,28 +64,26 @@
 
         <!--Jumbotron containing description and a pill navigator-->
         <div class="row">
-            <div class="col-sm-12">
-                <div class="jumbotron panel-alt">
-                    <h2>Our selection</h2>
-                    <hr style="margin: 10px 40px;">
-                    <p>
-                        Any of these cards can be customised to your specifications, or we can <br>
-                        create a new one for you. The possibilities are endless so please enquire!
-                        <br /><br />
-                        Prices are per card, printed messages are $0.50 extra per card. <br />
-                        Cards can be picked up in Auckland central, or shipped to your location. <br />
-                    </p>
-                    <hr style="margin: 10px 40px;">
-                    <ul class="nav nav-pills">
-                        <li id="weddingpill" class="active"><a class="pill-link" data-toggle="pill" href="#wedding">Wedding</a></li>
-                        <li id="birthdaypill"><a class="pill-link" data-toggle="pill" href="#birthday">Birthday</a></li>
-                        <li id="anniversarypill"><a class="pill-link" data-toggle="pill" href="#anniversary">Anniversary</a></li>
-                        <li id="babyshowerpill"><a class="pill-link" data-toggle="pill" href="#babyshower">Baby shower</a></li>
-                        <li id="thankyoupill"><a class="pill-link" data-toggle="pill" href="#thankyou">Thank you</a></li>
-                        <li id="savethedatepill"><a class="pill-link" data-toggle="pill" href="#savethedate">Save the date</a></li>
-                        <!--<li id="otherpill"><a class="pill-link" data-toggle="pill" href="#other">Other</a></li>-->
-                    </ul>
-                </div>
+            <div class="panel-alt">
+                <h2>Cards</h2>
+                <hr style="margin: 10px 40px;">
+                <p>
+                    Any of these cards can be customised to your specifications, or we can <br>
+                    create a new one for you. The possibilities are endless so please enquire!
+                    <br /><br />
+                    Prices are per card, printed messages are $0.50 extra per card. <br />
+                    Cards can be picked up in Auckland central, or shipped to your location. <br />
+                </p>
+                <hr style="margin: 10px 40px;">
+                <ul class="nav nav-pills">
+                    <li id="weddingpill" class="active"><a class="pill-link" data-toggle="pill" href="#wedding">Wedding</a></li>
+                    <li id="birthdaypill"><a class="pill-link" data-toggle="pill" href="#birthday">Birthday</a></li>
+                    <li id="anniversarypill"><a class="pill-link" data-toggle="pill" href="#anniversary">Anniversary</a></li>
+                    <li id="babyshowerpill"><a class="pill-link" data-toggle="pill" href="#babyshower">Baby shower</a></li>
+                    <li id="thankyoupill"><a class="pill-link" data-toggle="pill" href="#thankyou">Thank you</a></li>
+                    <li id="savethedatepill"><a class="pill-link" data-toggle="pill" href="#savethedate">Save the date</a></li>
+                    <!--<li id="otherpill"><a class="pill-link" data-toggle="pill" href="#other">Other</a></li>-->
+                </ul>
             </div>
         </div>
 
@@ -87,76 +91,74 @@
         <div class="tab-content" id="pills">
             <!--Wedding pane-->
             <div class="row tab-pane fade in active" id="wedding">
-                <div class="col-sm-12">
-                    <div class="panel panel-normal">
-                        <h2 class="text-center;">Wedding</h2>
-                        <hr style="margin: 10px 40px;">
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <div class="section">
+                <div class="panel panel-normal">
+                    <h2 class="text-center;">Wedding</h2>
+                    <hr style="margin: 10px 40px;">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="section">
 
-                                    <h3 class="text-center">Rustic</h3>
-                                    <hr style="margin: 10px 40px;">
-                                    
-                                        <img src="images/wedding/rustic.jpg" class="img-rounded image" alt="Rustic wedding invitation">
-                                        <p type="reset" onclick="location.href='enquiry.html'" alt="Click to enquire" class="image-footer  hvr-icon-forward">$2.50 ea - min 10</p>
+                                <h3 class="text-center">Rustic</h3>
+                                <hr style="margin: 10px 40px;">
 
+                                <img src="images/wedding/rustic.jpg" class="img-rounded image" alt="Rustic wedding invitation">
+                                <p type="reset" onclick="location.href='enquiry.html?card_type=wedding'" alt="Click to enquire" class="image-footer  hvr-icon-forward">$2.50 ea - min 10</p>
 
 
-                                </div>
+
                             </div>
-                            <div class="col-sm-4">
-                                <div class=" section">
-                                    <h3 class="text-center">Vintage</h3>
-                                    <hr style="margin: 10px 40px;">
-                                    
-                                        <img src="images/wedding/blackboardhearts.jpg" class="img-rounded image" alt="Hearts on blackboard wedding invitation">
-                                        <p type="reset" onclick="location.href='enquiry.html'" alt="Click to enquire" class="image-footer  hvr-icon-forward">$3.00 ea - min 10</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class=" section">
+                                <h3 class="text-center">Vintage</h3>
+                                <hr style="margin: 10px 40px;">
 
-                                </div>
+                                <img src="images/wedding/blackboardhearts.jpg" class="img-rounded image" alt="Hearts on blackboard wedding invitation">
+                                <p type="reset" onclick="location.href='enquiry.html'" alt="Click to enquire" class="image-footer  hvr-icon-forward">$3.00 ea - min 10</p>
+
                             </div>
-                            <div class="col-sm-4">
-                                <div class="section">
-                                    <h3 class="text-center">Elegant</h3>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="section">
+                                <h3 class="text-center">Elegant</h3>
+                                <hr style="margin: 10px 40px;">
+
+                                <img src="images/wedding/dress.jpg" class="img-rounded image" alt="White dress wedding invitation">
+                                <p type="reset" onclick="location.href='enquiry.html'" alt="Click to enquire" class="image-footer  hvr-icon-forward">$3.50 ea - min 10</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div id="hearts2-card-section" class="section">
+                                <h3 class="text-center">Japanese inspired</h3>
+                                <hr style="margin: 10px 40px;">
+                                <img src="images/wedding/fan.jpg" class="img-rounded image" alt="Pink fan wedding invitation">
+                                <p type="reset" onclick="location.href='enquiry.html'" alt="Click to enquire" class="image-footer  hvr-icon-forward">$3.00 ea - min 10</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div id="bee2-card-section" class=" section">
+                                <div class="row">
+                                    <h3 class="text-center">Heart crossed lovers</h3>
                                     <hr style="margin: 10px 40px;">
-                                    
-                                        <img src="images/wedding/dress.jpg" class="img-rounded image" alt="White dress wedding invitation">
-                                        <p type="reset" onclick="location.href='enquiry.html'" alt="Click to enquire" class="image-footer  hvr-icon-forward">$3.50 ea - min 10</p>
+
+                                    <img src="images/wedding/heartswithsuit.jpg" class="img-rounded image" alt="Two hearts with suit and dress wedding invitation"><br />
+                                    <p type="reset" onclick="location.href='enquiry.html'" alt="Click to enquire" class="image-footer  hvr-icon-forward">$3.00 ea - min 10</p>
 
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <div id="hearts2-card-section" class="section">
-                                    <h3 class="text-center">Japanese inspired</h3>
+                        <div class="col-sm-4">
+                            <div id="dress2-card-section" class="section">
+                                <div class="row">
+                                    <h3 class="text-center">Simple heart design</h3>
                                     <hr style="margin: 10px 40px;">
-                                        <img src="images/wedding/fan.jpg" class="img-rounded image" alt="Pink fan wedding invitation">
-                                        <p type="reset" onclick="location.href='enquiry.html'" alt="Click to enquire" class="image-footer  hvr-icon-forward">$3.00 ea - min 10</p>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div id="bee2-card-section" class=" section">
-                                    <div class="row">
-                                        <h3 class="text-center">Heart crossed lovers</h3>
-                                        <hr style="margin: 10px 40px;">
-                                            
-                                                <img src="images/wedding/heartswithsuit.jpg" class="img-rounded image" alt="Two hearts with suit and dress wedding invitation"><br />
-                                                <p type="reset" onclick="location.href='enquiry.html'" alt="Click to enquire" class="image-footer  hvr-icon-forward">$3.00 ea - min 10</p>
 
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div id="dress2-card-section" class="section">
-                                    <div class="row">
-                                            <h3 class="text-center">Simple heart design</h3>
-                                            <hr style="margin: 10px 40px;">
-                                            
-                                                    <img src="images/wedding/redheart.jpg" class="img-rounded image" alt="Red heart wedding invitation"><br/>
-                                                    <p type="reset" onclick="location.href='enquiry.html'" alt="Click to enquire" class="image-footer  hvr-icon-forward">$2.50 ea - min 10</p>
+                                    <img src="images/wedding/redheart.jpg" class="img-rounded image" alt="Red heart wedding invitation"><br />
+                                    <p type="reset" onclick="location.href='enquiry.html'" alt="Click to enquire" class="image-footer  hvr-icon-forward">$2.50 ea - min 10</p>
 
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -169,155 +171,145 @@
             </div>
             <!--Birthday pane-->
             <div class="row tab-pane fade" id="birthday">
-                <div class="col-sm-12">
-                    <div class="panel panel-blue">
-                        <h2 class="text-center">Birthday</h2>
-                        <hr style="margin: 0px 40px;">
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <div id="hearts-card-section" class="section">
-                                    <h3 class="text-center">Blue</h3>
-                                    <hr style="margin: 10px 40px;">
-                                    
-                                        <img src="images/birthday/blueballoons.jpg" class="img-rounded image" alt="Blue balloons birthday invitation">
-                                        <p type="reset" onclick="location.href='enquiry.html'" alt="Click to enquire" class="image-footer  hvr-icon-forward">$2.50 ea - min 5</p>
+                <div class="panel panel-blue">
+                    <h2 class="text-center">Birthday</h2>
+                    <hr style="margin: 0px 40px;">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div id="hearts-card-section" class="section">
+                                <h3 class="text-center">Blue</h3>
+                                <hr style="margin: 10px 40px;">
 
+                                <img src="images/birthday/blueballoons.jpg" class="img-rounded image" alt="Blue balloons birthday invitation">
+                                <p type="reset" onclick="location.href='enquiry.html'" alt="Click to enquire" class="image-footer  hvr-icon-forward">$2.50 ea - min 5</p>
 
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div id="bee-card-section" class=" section">
-                                    <h3 class="text-center">Bee our guest</h3>
-                                    <hr style="margin: 10px 40px;">
-                                    
-                                        <img src="images/birthday/bee.jpg" class="img-rounded image" alt="Bumble bee birthday invitation">
-                                        <p type="reset" onclick="location.href='enquiry.html'" alt="Click to enquire" class="image-footer  hvr-icon-forward">$2.80 ea - min 5</p>
-
-
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div id="dress-card-section" class="section">
-                                    <h3 class="text-center">Yellow</h3>
-                                    <hr style="margin: 10px 40px;">
-                                    
-                                        <img src="images/birthday/yellowballoons.jpg" class="img-rounded image" alt="Yellow balloons birthday invitation">
-                                        <p type="reset" onclick="location.href='enquiry.html'" alt="Click to enquire" class="image-footer  hvr-icon-forward">$2.50 ea - min 5</p>
-
-                                </div>
                             </div>
                         </div>
+                        <div class="col-sm-4">
+                            <div id="bee-card-section" class=" section">
+                                <h3 class="text-center">Bee our guest</h3>
+                                <hr style="margin: 10px 40px;">
 
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <div id="hearts-card-section" class="section">
-                                    <h3 class="text-center">Princess</h3>
-                                    <hr style="margin: 10px 40px;">
-                                    
-                                            <img src="images/birthday/oneyearcrown.jpg" class="img-rounded image" alt="One year old birthday invitation">
-                                            <p type="reset" onclick="location.href='enquiry.html'" alt="Click to enquire" class="image-footer  hvr-icon-forward">$2.00 ea - min 5</p>
+                                <img src="images/birthday/bee.jpg" class="img-rounded image" alt="Bumble bee birthday invitation">
+                                <p type="reset" onclick="location.href='enquiry.html'" alt="Click to enquire" class="image-footer  hvr-icon-forward">$2.80 ea - min 5</p>
 
-
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div id="dress-card-section" class="section">
-                                    <h3 class="text-center">Owl</h3>
-                                    <hr style="margin: 10px 40px;">
-
-                                    <img src="images/birthday/owl1.jpg" onmouseover="this.src = 'images/birthday/owl2.jpg';" onmouseout="this.src = 'images/birthday/owl1.jpg';" class="img-rounded image" alt="Owl bithday invitation">
-                                    <p type="reset" onclick="location.href='enquiry.html'" alt="Click to enquire" class="image-footer  hvr-icon-forward">$3.20 ea - min 5</p>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div id="dress-card-section" class="section">
-                                    <h3 class="text-center">Pirate</h3>
-                                    <hr style="margin: 10px 40px;">
-                                    
-                                            <img src="images/birthday/pirate.jpg" class="img-rounded image" alt="Pirate bithday invitation">
-                                            <p type="reset" onclick="location.href='enquiry.html'" alt="Click to enquire" class="image-footer  hvr-icon-forward">$2.00 ea - min 5</p>
-
-
-                                </div>
                             </div>
                         </div>
+                        <div class="col-sm-4">
+                            <div id="dress-card-section" class="section">
+                                <h3 class="text-center">Yellow</h3>
+                                <hr style="margin: 10px 40px;">
 
-                        <!--Buttons to be used when extra cotent is added-->
-                        <!--<i id="birthday-expand-btn" onclick="expand_panel('birthday');" class="fa fa-chevron-circle-down fa-3x hvr-grow  clickable"></i>
-                        <i id="birthday-deflate-btn" onclick="deflate_panel('birthday');" class="fa fa-chevron-circle-up fa-3x hvr-grow clickable" style="display:none;"></i>-->
+                                <img src="images/birthday/yellowballoons.jpg" class="img-rounded image" alt="Yellow balloons birthday invitation">
+                                <p type="reset" onclick="location.href='enquiry.html'" alt="Click to enquire" class="image-footer  hvr-icon-forward">$2.50 ea - min 5</p>
+
+                            </div>
+                        </div>
                     </div>
+
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div id="hearts-card-section" class="section">
+                                <h3 class="text-center">Princess</h3>
+                                <hr style="margin: 10px 40px;">
+
+                                <img src="images/birthday/oneyearcrown.jpg" class="img-rounded image" alt="One year old birthday invitation">
+                                <p type="reset" onclick="location.href='enquiry.html'" alt="Click to enquire" class="image-footer  hvr-icon-forward">$2.00 ea - min 5</p>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div id="dress-card-section" class="section">
+                                <h3 class="text-center">Owl</h3>
+                                <hr style="margin: 10px 40px;">
+
+                                <img src="images/birthday/owl1.jpg" onmouseover="this.src = 'images/birthday/owl2.jpg';" onmouseout="this.src = 'images/birthday/owl1.jpg';" class="img-rounded image" alt="Owl bithday invitation">
+                                <p type="reset" onclick="location.href='enquiry.html'" alt="Click to enquire" class="image-footer  hvr-icon-forward">$3.20 ea - min 5</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div id="dress-card-section" class="section">
+                                <h3 class="text-center">Pirate</h3>
+                                <hr style="margin: 10px 40px;">
+
+                                <img src="images/birthday/pirate.jpg" class="img-rounded image" alt="Pirate bithday invitation">
+                                <p type="reset" onclick="location.href='enquiry.html'" alt="Click to enquire" class="image-footer  hvr-icon-forward">$2.00 ea - min 5</p>
+
+                           </div>
+                        </div>
+                    </div>
+
+                    <!--Buttons to be used when extra cotent is added-->
+                    <!--<i id="birthday-expand-btn" onclick="expand_panel('birthday');" class="fa fa-chevron-circle-down fa-3x hvr-grow  clickable"></i>
+                    <i id="birthday-deflate-btn" onclick="deflate_panel('birthday');" class="fa fa-chevron-circle-up fa-3x hvr-grow clickable" style="display:none;"></i>-->
                 </div>
             </div>
             <!--Anniversary pane-->
             <div class="row tab-pane fade" id="anniversary">
-                <div class="col-sm-12">
-                    <div class="panel panel-alt">
-                        <h2 class="text-center">Anniversary</h2>
-                        <hr style="margin: 0px 40px;">
-                        <div class="row">
-                            <div class="col-sm-4 col-sm-offset-2">
-                                <div class="section" style="">
-                                    <h3 class="text-center">Silver</h3>
-                                    <hr style="margin: 10px 40px;">                                   
-                                        <img src="images/anniversary/25year.jpg" class="img-rounded image" alt="25 year anniversary invitation">
-                                        <p type="reset" onclick="location.href='enquiry.html'" alt="Click to enquire" class="image-footer  hvr-icon-forward">$3.00 ea - min 10</p>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="section">
-                                    <h3 class="text-center">Hearts</h3>
-                                    <hr style="margin: 10px 40px;">                                
-                                        <img src="images/anniversary/hearts.jpg" class="img-rounded image" alt="Red heart anniversary invitation">
-                                        <p type="reset" onclick="location.href='enquiry.html'" alt="Click to enquire" class="image-footer  hvr-icon-forward">$3.50 ea - min 10</p>
-                                </div>
+                <div class="panel panel-alt">
+                    <h2 class="text-center">Anniversary</h2>
+                    <hr style="margin: 0px 40px;">
+                    <div class="row">
+                        <div class="col-sm-4 col-sm-offset-2">
+                            <div class="section" style="">
+                                <h3 class="text-center">Silver</h3>
+                                <hr style="margin: 10px 40px;">
+                                <img src="images/anniversary/25year.jpg" class="img-rounded image" alt="25 year anniversary invitation">
+                                <p type="reset" onclick="location.href='enquiry.html'" alt="Click to enquire" class="image-footer  hvr-icon-forward">$3.00 ea - min 10</p>
                             </div>
                         </div>
-
-                        <!--<div class="row" name="row-extra-anniversary" style="display:none;">
-                        </div>-->
-                        <!--Buttons to be used when extra cotent is added-->
-                        <!--<i id="anniversary-expand-btn" onclick="expand_panel('anniversary');" class="fa fa-chevron-circle-down fa-3x hvr-grow clickable"></i>
-                        <i id="anniversary-deflate-btn" onclick="deflate_panel('anniversary');" class="fa fa-chevron-circle-up fa-3x hvr-grow clickable" style="display:none;"></i>-->
+                        <div class="col-sm-4">
+                            <div class="section">
+                                <h3 class="text-center">Hearts</h3>
+                                <hr style="margin: 10px 40px;">
+                                <img src="images/anniversary/hearts.jpg" class="img-rounded image" alt="Red heart anniversary invitation">
+                                <p type="reset" onclick="location.href='enquiry.html'" alt="Click to enquire" class="image-footer  hvr-icon-forward">$3.50 ea - min 10</p>
+                            </div>
+                        </div>
                     </div>
+
+                    <!--<div class="row" name="row-extra-anniversary" style="display:none;">
+                    </div>-->
+                    <!--Buttons to be used when extra cotent is added-->
+                    <!--<i id="anniversary-expand-btn" onclick="expand_panel('anniversary');" class="fa fa-chevron-circle-down fa-3x hvr-grow clickable"></i>
+                    <i id="anniversary-deflate-btn" onclick="deflate_panel('anniversary');" class="fa fa-chevron-circle-up fa-3x hvr-grow clickable" style="display:none;"></i>-->
                 </div>
             </div>
             <!--Babyshower pane-->
             <div class="row tab-pane fade" id="babyshower">
-                <div class="col-sm-12">
-                    <div class="panel panel-normal">
-                        <h2 class="text-center">Baby shower</h2>
-                        <hr style="margin: 0px 40px;">
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <div class="section">
-                                    <h3 class="text-center">Postcard</h3>
-                                    <hr style="margin: 10px 40px;">
-                                    
-                                        <img src="images/babyshower/itsaboy.jpg" class="img-rounded image" alt="It's a boy babyshower invitation">
-                                        <img src="images/babyshower/itsaboy.jpg" class="img-rounded image" alt="It's a boy babyshower invitation">
-                                        <p type="reset" onclick="location.href='enquiry.html'" alt="Click to enquire" class="image-footer  hvr-icon-forward">$2.00 ea - min 10</p>
+                <div class="panel panel-normal">
+                    <h2 class="text-center">Baby shower</h2>
+                    <hr style="margin: 0px 40px;">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="section">
+                                <h3 class="text-center">Postcard</h3>
+                                <hr style="margin: 10px 40px;">
 
-                                </div>
+                                <img src="images/babyshower/itsaboy.jpg" class="img-rounded image" alt="It's a boy babyshower invitation">
+                                <img src="images/babyshower/itsaboy.jpg" class="img-rounded image" alt="It's a boy babyshower invitation">
+                                <p type="reset" onclick="location.href='enquiry.html'" alt="Click to enquire" class="image-footer  hvr-icon-forward">$2.00 ea - min 10</p>
+
                             </div>
-                            <div class="col-sm-4">
-                                <div class="section">
-                                    <h3 class="text-center">It's a boy!</h3>
-                                    <hr style="margin: 10px 40px;">
-                                    
-                                        <img src="images/babyshower/nappy.jpg" class="img-rounded image" alt="Nappy babyshower invitation">
-                                        <p type="reset" onclick="location.href='enquiry.html'" alt="Click to enquire" class="image-footer  hvr-icon-forward">$2.75 ea - min 10</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="section">
+                                <h3 class="text-center">It's a boy!</h3>
+                                <hr style="margin: 10px 40px;">
 
-                                </div>
+                                <img src="images/babyshower/nappy.jpg" class="img-rounded image" alt="Nappy babyshower invitation">
+                                <p type="reset" onclick="location.href='enquiry.html'" alt="Click to enquire" class="image-footer  hvr-icon-forward">$2.75 ea - min 10</p>
+
                             </div>
-                            <div class="col-sm-4">
-                                <div class="section">
-                                    <h3 class="text-center">Pram</h3>
-                                    <hr style="margin: 10px 40px;">
-                                    
-                                            <img src="images/babyshower/pinkpram.jpg" class="img-rounded image" alt="Pink pram babyshower invitation">
-                                            <p type="reset" onclick="location.href='enquiry.html'" alt="Click to enquire" class="image-footer  hvr-icon-forward">$2.00 ea - min 10</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="section">
+                                <h3 class="text-center">Pram</h3>
+                                <hr style="margin: 10px 40px;">
 
-                                </div>
+                                <img src="images/babyshower/pinkpram.jpg" class="img-rounded image" alt="Pink pram babyshower invitation">
+                                <p type="reset" onclick="location.href='enquiry.html'" alt="Click to enquire" class="image-footer  hvr-icon-forward">$2.00 ea - min 10</p>
+
                             </div>
                         </div>
 
@@ -329,75 +321,71 @@
             </div>
             <!--Thank you pane-->
             <div class="row tab-pane fade" id="thankyou">
-                <div class="col-sm-12">
-                    <div class="panel panel-blue">
-                        <h2 class="text-center">Thank you</h2>
-                        <hr style="margin: 0px 40px;">
-                        <div class="row">
-                            <div class="col-sm-4 col-sm-offset-2">
-                                <div class="section">
-                                    <h3 class="text-center">Wedding</h3>
-                                    <hr style="margin: 10px 40px;">
-                                    
-                                            <img src="images/thankyou/goldandblackhearts.jpg" class="img-rounded image" alt="Gold and black heart thank you">
-                                            <p type="reset" onclick="location.href='enquiry.html'" alt="Click to enquire" class="image-footer  hvr-icon-forward">$3.00 ea - min 5</p>
+                <div class="panel panel-blue">
+                    <h2 class="text-center">Thank you</h2>
+                    <hr style="margin: 0px 40px;">
+                    <div class="row">
+                        <div class="col-sm-4 col-sm-offset-2">
+                            <div class="section">
+                                <h3 class="text-center">Wedding</h3>
+                                <hr style="margin: 10px 40px;">
 
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class=" section">
-                                    <h3 class="text-center">Simple</h3>
-                                    <hr style="margin: 10px 40px;">
-                                    
-                                            <img src="images/thankyou/threehearts.jpg" class="img-rounded image" alt="Three hearts thank you">
-                                            <p type="reset" onclick="location.href='enquiry.html'" alt="Click to enquire" class="image-footer  hvr-icon-forward">$2.00 ea - min 5</p>
+                                <img src="images/thankyou/goldandblackhearts.jpg" class="img-rounded image" alt="Gold and black heart thank you">
+                                <p type="reset" onclick="location.href='enquiry.html'" alt="Click to enquire" class="image-footer  hvr-icon-forward">$3.00 ea - min 5</p>
 
-                                </div>
                             </div>
                         </div>
+                        <div class="col-sm-4">
+                            <div class=" section">
+                                <h3 class="text-center">Simple</h3>
+                                <hr style="margin: 10px 40px;">
 
-                        <!--Buttons to be used when extra cotent is added-->
-                        <!--<i id="other-expand-btn" onclick="expand_panel('other');" class="fa fa-chevron-circle-down fa-3x hvr-grow clickable"></i>
-                        <i id="other-deflate-btn" onclick="deflate_panel('other');" class="fa fa-chevron-circle-up fa-3x hvr-grow clickable" style="display:none;"></i>-->
+                                <img src="images/thankyou/threehearts.jpg" class="img-rounded image" alt="Three hearts thank you">
+                                <p type="reset" onclick="location.href='enquiry.html'" alt="Click to enquire" class="image-footer  hvr-icon-forward">$2.00 ea - min 5</p>
+
+                            </div>
+                        </div>
                     </div>
+
+                    <!--Buttons to be used when extra cotent is added-->
+                    <!--<i id="other-expand-btn" onclick="expand_panel('other');" class="fa fa-chevron-circle-down fa-3x hvr-grow clickable"></i>
+                    <i id="other-deflate-btn" onclick="deflate_panel('other');" class="fa fa-chevron-circle-up fa-3x hvr-grow clickable" style="display:none;"></i>-->
                 </div>
             </div>
             <!--Save the date pane-->
             <div class="row tab-pane fade" id="savethedate">
-                <div class="col-sm-12">
-                    <div class="panel panel-blue">
-                        <h2 class="text-center">Save the date</h2>
-                        <hr style="margin: 0px 40px;">
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <div class="section">
-                                    <h3 class="text-center">Bookmark</h3>
-                                    <hr style="margin: 10px 40px;">
-                                    
-                                        <img src="images/savethedate/cartoon.png" class="img-rounded image" alt="Cartoon save the date">
-                                        <p type="reset" onclick="location.href='enquiry.html'" alt="Click to enquire" class="image-footer  hvr-icon-forward">$2.30 ea - min 10</p>
+                <div class="panel panel-blue">
+                    <h2 class="text-center">Save the date</h2>
+                    <hr style="margin: 0px 40px;">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="section">
+                                <h3 class="text-center">Bookmark</h3>
+                                <hr style="margin: 10px 40px;">
 
-                                </div>
+                                <img src="images/savethedate/cartoon.png" class="img-rounded image" alt="Cartoon save the date">
+                                <p type="reset" onclick="location.href='enquiry.html'" alt="Click to enquire" class="image-footer  hvr-icon-forward">$2.30 ea - min 10</p>
+
                             </div>
-                            <div class="col-sm-4">
-                                <div class=" section">
-                                    <h3 class="text-center">Calendar</h3>
-                                    <hr style="margin: 10px 40px;">
-                                    
-                                            <img src="images/savethedate/green.jpg" class="img-rounded image" alt="Green calendar save the date">
-                                            <p type="reset" onclick="location.href='enquiry.html'" alt="Click to enquire" class="image-footer  hvr-icon-forward">$3.00 ea - min 10</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class=" section">
+                                <h3 class="text-center">Calendar</h3>
+                                <hr style="margin: 10px 40px;">
 
-                                </div>
+                                <img src="images/savethedate/green.jpg" class="img-rounded image" alt="Green calendar save the date">
+                                <p type="reset" onclick="location.href='enquiry.html'" alt="Click to enquire" class="image-footer  hvr-icon-forward">$3.00 ea - min 10</p>
+
                             </div>
-                            <div class="col-sm-4">
-                                <div class="section">
-                                    <h3 class="text-center">Simple</h3>
-                                    <hr style="margin: 10px 40px;">
-                                    
-                                        <img src="images/savethedate/squares.jpg" class="img-rounded image" alt="Squares save the date">
-                                        <p type="reset" onclick="location.href='enquiry.html'" alt="Click to enquire" class="image-footer  hvr-icon-forward">$2.00 ea - min 10</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="section">
+                                <h3 class="text-center">Simple</h3>
+                                <hr style="margin: 10px 40px;">
 
-                                </div>
+                                <img src="images/savethedate/squares.jpg" class="img-rounded image" alt="Squares save the date">
+                                <p type="reset" onclick="location.href='enquiry.html'" alt="Click to enquire" class="image-footer  hvr-icon-forward">$2.00 ea - min 10</p>
+
                             </div>
                         </div>
 

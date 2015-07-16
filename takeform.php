@@ -16,6 +16,7 @@ if(empty($_POST['name'])  ||
 $name = $_POST['name'];
 $email_address = $_POST['email'];
 $subject = $_POST['subject'];
+$purchase = $_POST['purchase'];
 $cardtype = $_POST['cardtype'];
 $promo = $_POST['promo'];
 $cardselected = $_POST['cardselected'];
@@ -36,8 +37,14 @@ if( empty($errors))
 	$email_subject = "Make it you enquiry submission: $name";
 	$email_body = "You have received a new enquiry. ".
 	" Here are the details:\n \n Name: $name \n ".
-	"Email: $email_address\n Subject: $subject \n Card type: $cardtype \n Promo code: $promo \n Card: $cardselected \n \n Message: \n $message";
+	"Email: $email_address\n Subject: $subject \n";
 
+	if(purchase == "Card") $email_body += "Card type: $cardtype \n Card: $cardselected \n";
+	else if(purchase == "Scrapbook") $email_body += "Scrapbook chosen \n ";
+
+	if(promo != "") $email_body += "Promo code: $promo \n \n";
+
+	$email_body += "Message: \n $message";
 	
 		//redirect to the 'thank you' page
 	header('Location: thankyou.html');
